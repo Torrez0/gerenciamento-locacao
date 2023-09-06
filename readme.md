@@ -7,3 +7,4 @@ A finalidade da nossa ferramenta é auxiliar e tornar prática a locação de qu
 Séra possível visualizar os horários disponíveis e reservar conforme disponibilidade.
 
 
+![Diagrama banco de dados](/diagramaBD/Modelo_Logico_BD.PNG)
