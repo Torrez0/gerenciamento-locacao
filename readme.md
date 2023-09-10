@@ -15,3 +15,14 @@ Prototipos das telas:
 ![Print da tela do item escolhido](/telasAPP/TelaQuadra.png)
 ![Print da tela de reserva do item escolhido](/telasAPP/TelaReserva.png)
 ![Print da tela de confirmacao de reserva](/telasAPP/TelaConfirma.png)
+
+## Cores utilizadas
+
+#005594
+#0003E7
+#2967F4
+#78849E
+#E4E8F0
+#F78B1F
+#F6BF86
+#29B7F4
