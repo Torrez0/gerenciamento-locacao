@@ -6,9 +6,9 @@ A finalidade da nossa ferramenta é auxiliar e tornar prática a locação de qu
 
 Séra possível visualizar os horários disponíveis e reservar conforme disponibilidade.
 
-Diagrama do Banco de Dados
+## Diagrama do Banco de Dados
 ![Diagrama banco de dados](/diagramaBD/Modelo_Logico_BD.PNG)
-Prototipos das telas:
+## Prototipos das telas:
 ![Print da tela Home](/telasAPP/TelaHome.png)
 ![Print da tela de Cadastro de usuario](/telasAPP/TelaCadastro.png)
 ![Print da tela de Login de usuario](/telasAPP/TelaLogin.png)
