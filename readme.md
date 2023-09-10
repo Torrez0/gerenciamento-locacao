@@ -15,6 +15,8 @@ Séra possível visualizar os horários disponíveis e reservar conforme disponi
 ![Print da tela do item escolhido](/telasAPP/TelaQuadra.png)
 ![Print da tela de reserva do item escolhido](/telasAPP/TelaReserva.png)
 ![Print da tela de confirmacao de reserva](/telasAPP/TelaConfirma.png)
+![PNG da Logo do GetQuick](/telasAPP/logoGetQuick.png)
+
 
 ## Cores utilizadas
 
