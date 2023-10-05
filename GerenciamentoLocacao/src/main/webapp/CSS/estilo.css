@@ -1,43 +1,78 @@
 /*AZUL HOME - #005594  */
 /*AZUL CLARO HOME - #2966F4  */
+/* AZUL PARTE DE CIMA NAV - #115A90 */
 /*CINZA LETRA - #78849E  */
 /*CINZA BACKGROUND - #E4E8F0  */
 /*LARANJA - #F78B1F  */
 /*LARANJA CLARO - #F6BF86  */
 /*AZUL CLARISSIMO - #29B7F4  */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 *{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box; /*leva em conta o tamanho da borda e padding, não ultrapassando 
+    a proporção criada */
 
 }
 
-.container{
+.logoQuick{
+
+    size: 20px;
+    height: 125px;
+    padding: 10px;
+}
+.container {
     display: flex;
     background-color: #005594;
-    padding: 150px;
+    padding: 100px;
     border-radius: 0px 0px 20px 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .header {
+    background-color: #115A90;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.5); 
+    position: relative; 
+    z-index: 2;
+  }
+  
+
+.header.logo-site{
+    height: 50px;
 }
-.header{
-    background: #2966F4;
-    position: absolute;
+
+.botoes-nav{
+    height: 0%;
+    display: flex;
+    margin-right: 50px;
+    margin-top: 25px;
 }
 
 
-
-
-.botaologin {
+.botao-login {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     width: 12vh;
     height: 4vh;
     background: #f78b1f;
     color: #fff;
     border: 1px solid #eee;
     border-radius: 9px;
-
     text-shadow: none;
+    margin: 20px;
     }
 
-.botaologin:hover {
+.botao-login a{
+    text-decoration: none;
+    color: white;
+    border: 2px solid;
+}
+
+.botao-login:hover {
     background: #a35304;
     color: #fff;
     border: 1px solid #eee;

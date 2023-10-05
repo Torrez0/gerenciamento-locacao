@@ -1,42 +1,31 @@
 <html>
 <body>
-<h2>Get Quick</h2>
-
+    
 <form action="/create-user" method="post">
 
 
 
     <label>Nome: </label>
-    <input type="text" name="usuario-nome" id="usuario-nome">
+    <input type="text" name="user-nome" id="user-nome">
 
     <label>Email: </label>
-    <input type="text" name="usuario-email" id="usuario-email">
+    <input type="email" name="user-email" id="user-email">
 
     <label>Genero: </label>
-    <input type="text" name="usuario-genero" id="usuario-genero">
+    <input type="text" name="user-genero" id="user-genero">
 
     <label>Celular: </label>
-    <input type="text" name="usuario-celular" id="usuario-celular">
+    <input type="tel" name="user-celular" id="user-celular">
 
     <label>Usuario: </label>
     <input type="text" name="user-name" id="user-name">
 
     <label>Senha: </label>
-    <input type="password" name="pass-word" id="pass-word">
+    <input type="password" name="user-password" id="user-password">
 
     <button type="submit">Register</button>
 
 </form>
-<div>
-
-        <form action="/login-user" method="get">
-            <label>Usuario: </label>
-            <input type="text" name="user-name" id="login-name">
-            <label>Senha: </label>
-            <input type="password" name="pass-word" id="login-password">
-            <button type="submit" class="botaologin">Entrar</button>
-        </form>
-</div>
 
 </body>
 </html>
