@@ -13,7 +13,10 @@
     margin: 0px;
     box-sizing: border-box; /*leva em conta o tamanho da borda e padding, não ultrapassando 
     a proporção criada */
-
+   
+}
+body{
+  background: #E4E8F0;
 }
 
 .logoQuick{
@@ -25,10 +28,11 @@
 .container {
     display: flex;
     background-color: #005594;
-    padding: 100px;
+    padding: 50px;
     border-radius: 0px 0px 20px 20px;
     position: relative;
     z-index: 1;
+    justify-content: center;
   }
   
   .header {
@@ -55,12 +59,12 @@
 
 .botao-login {
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     width: 12vh;
     height: 4vh;
     background: #f78b1f;
     color: #fff;
-    border: 1px solid #eee;
+    border: 0px solid #eee;
     border-radius: 9px;
     text-shadow: none;
     margin: 20px;
@@ -73,9 +77,54 @@
 }
 
 .botao-login:hover {
-    background: #a35304;
+    background: #f78b1fde;
     color: #fff;
-    border: 1px solid #eee;
+    border: 0px solid #eee;
+    border-radius: 9px;
+    text-shadow: none;
+    }
+
+.campo-busca{
+    height: 0%;
+   margin-right: 150px;
+   display: flex
+    
+}
+
+  
+  .txtBusca{
+    float:left;
+    justify-content: center;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:300px;
+    padding-left: 10px;
+    margin-left: 50px;
+    border-radius:15px;
+    outline: none;
+    box-shadow: inset 1px 2px 7px 2px rgba(0, 0, 0, 0.5); 
+  }
+ 
+
+  .botao-buscar{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    height:32px;
+    width:70px;
+    background: #f78b1f;
+    color: #fff;
+    border: 0px solid #eee;
+    border-radius: 9px;
+    text-shadow: none;
+    margin-left: 100px;
+  }
+
+  .botao-buscar:hover {
+    background: #f78b1fde;
+    color: #fff;
+    border: 0px solid #eee;
     border-radius: 9px;
     text-shadow: none;
     }
