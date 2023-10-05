@@ -1,9 +1,39 @@
+/*AZUL HOME - #005594  */
+/*AZUL CLARO HOME - #2966F4  */
+/*CINZA LETRA - #78849E  */
+/*CINZA BACKGROUND - #E4E8F0  */
+/*LARANJA - #F78B1F  */
+/*LARANJA CLARO - #F6BF86  */
+/*AZUL CLARISSIMO - #29B7F4  */
+
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.container{
+    display: flex;
+    background-color: #005594;
+    padding: 150px;
+    border-radius: 0px 0px 20px 20px;
+}
+.header{
+    background: #2966F4;
+    position: absolute;
+}
+
+
+
+
 .botaologin {
+    width: 12vh;
+    height: 4vh;
     background: #f78b1f;
     color: #fff;
     border: 1px solid #eee;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px #eee;
+    border-radius: 9px;
+
     text-shadow: none;
     }
 
@@ -11,7 +41,6 @@
     background: #a35304;
     color: #fff;
     border: 1px solid #eee;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px #eee;
+    border-radius: 9px;
     text-shadow: none;
     }
