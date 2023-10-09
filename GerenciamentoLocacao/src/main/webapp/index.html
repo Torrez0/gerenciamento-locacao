@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/estilo.css" media="screen" />
+
+</head>
+<body>
+
+<header>
+    <div class="header">
+        <div class="logo-site">
+            <img class="logoQuick" src="../Imgs/logoGetQuick.png">
+        </div>
+        <div class="botoes-nav">
+            <button class="botao-login" id="loginBotao" onclick="abrirLoginDialog()">Login</button>
+            <button class="botao-login" onclick="abrirCadastroDialog()" >Cadastro</button>
+
+            <dialog id="loginDialog">
+                <form >
+
+                    <label>E-mail: </label>
+                    <input type="email" name="login-email" id="login-email">
+                    <label>Senha: </label>
+                    <input type="password" name="pass-word" id="login-password">
+                    <button type="submit" class="botaologin">Entrar</button>
+                    <button type="button" class="botaologin" onclick="fecharLoginDialog()">Fechar</button>
+
+                </form>
+
+
+            </dialog>
+            <dialog id="CadastroDialog">
+                <form action="/create-user" method="post">
+
+
+
+                    <label>Nome: </label>
+                    <input type="text" name="usuario-nome" id="usuario-nome">
+
+                    <label>Email: </label>
+                    <input type="text" name="usuario-email" id="usuario-email">
+
+                    <label>Genero: </label>
+                    <input type="text" name="usuario-genero" id="usuario-genero">
+
+                    <label>Celular: </label>
+                    <input type="text" name="usuario-celular" id="usuario-celular">
+
+                    <label>Usuario: </label>
+                    <input type="text" name="user-name" id="user-name">
+
+                    <label>Senha: </label>
+                    <input type="password" name="pass-word" id="pass-word">
+
+                    <button type="submit">Register</button>
+                    <button type="button" onclick="fecharCadastroDialog()">Fechar</button>
+
+
+                </form>
+            </dialog>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="campo-busca">
+            <div>
+                <input type="text" class="txtBusca" placeholder="Locação"/>
+            </div>
+            <div >
+                <input type="text" class="txtBusca" placeholder="Unidade"/>
+            </div>
+            <div>
+                <button class="botao-buscar">Buscar</button>
+            </div>
+        </div>
+    </div>
+    <div >
+        <div>
+            <h2>
+                SALVE
+            </h2>
+        </div>
+
+    </div>
+
+</header>
+
+
+</main>
+<script src="JS/Scripts.js"></script>
+</body>
+</html>
