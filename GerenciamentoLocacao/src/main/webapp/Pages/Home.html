@@ -7,15 +7,33 @@
     
 </head>
 <body>
+    
     <header>
         <div class="header">
             <div class="logo-site">
                 <img class="logoQuick" src="../Imgs/logoGetQuick.png">
             </div>
             <div class="botoes-nav">
-                <a class="a" href="../Pages/Login.html"><button class="botao-login">Login</button></a>
+                <button class="botao-login" id="loginBotao" onclick="abrirLoginDialog()">Login</button>
                 <a class="a" href="../Pages/Cadastro.html"><button class="botao-login">Cadastro</button></a>
+            
+                <dialog id="loginDialog">
+                    <form >
+                        
+                        <label>E-mail: </label>
+                        <input type="email" name="login-email" id="login-email">
+                        <label>Senha: </label>
+                        <input type="password" name="pass-word" id="login-password">
+                        <button type="submit" class="botaologin">Entrar</button>
+                        <button type="button" class="botaologin" onclick="fecharLoginDialog()">Fechar</button>
+
+                    </form>
+                
+    
+                </dialog>
+            
             </div>
+        
         </div>
 
         <div class="container">
@@ -44,6 +62,6 @@
         
 
     </main>
-    
+    <script src="../JS/Scripts.js"></script>
 </body>
 </html>

@@ -128,3 +128,33 @@ body{
     border-radius: 9px;
     text-shadow: none;
     }
+
+.dialog-box{
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+    .dialog-box label {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  .dialog-box input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+  }
+
+  .dialog-box button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
