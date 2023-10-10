@@ -57,7 +57,7 @@ body{
 }
 
 
-.botao-login {
+.botaoLogin {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     width: 12vh;
@@ -70,14 +70,14 @@ body{
     margin: 20px;
     }
 
-.botao-login a{
+.botaoLogin a{
     text-decoration: none;
     color: white;
     border: 2px solid;
 }
 
-.botao-login:hover {
-    background: #f78b1fde;
+.botaoLogin:hover {
+    background: #f1b477de;
     color: #fff;
     border: 0px solid #eee;
     border-radius: 9px;
@@ -108,7 +108,7 @@ body{
   }
 
 
-  .botao-buscar{
+  .botaoBuscar{
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     height:32px;
@@ -121,8 +121,8 @@ body{
     margin-left: 100px;
   }
 
-  .botao-buscar:hover {
-    background: #f78b1fde;
+  .botaoBuscar:hover {
+    background: #f1b477de;
     color: #fff;
     border: 0px solid #eee;
     border-radius: 9px;
@@ -155,22 +155,31 @@ body{
     width: 100%;
     margin-bottom: 30px;
     align-items: center;
-    padding-left: 44%;
+    text-align: center;
+    font-size: 20px;
+    color: #78849E;
+  }
+  h5{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    align-items: center;
     font-size: 20px;
     color: #78849E;
   }
   .caixaDialog label {
     color: #78849E;
     width: 30%; /* Define o tamanho fixo do rótulo, ajuste conforme necessário */
-    margin-bottom: 10px;
+    margin-bottom: 7px;
     box-sizing: border-box;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 .caixaDialog input {
+    height: 30px;
     border-radius: 5px;
     width: 70%; /* Faz com que o campo de entrada ocupe todo o espaço restante */
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     padding: 5px;
     box-sizing: border-box;
     border: none;
@@ -182,7 +191,7 @@ body{
       padding: 10px;
       margin-left: 20px;
   }
-.botao{
+button{
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   width: 12vh;
@@ -191,5 +200,15 @@ body{
   border: 0px solid #eee;
   border-radius: 9px;
   text-shadow: none;
+  cursor: pointer;
+  transition: all 0.5s;
  
 }
+
+button:hover {
+  background: #f1b477de;
+  color: #fff;
+  border: 0px solid #eee;
+  border-radius: 9px;
+  text-shadow: none;
+  }

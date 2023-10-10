@@ -15,7 +15,7 @@
             <input type="email" name="login-email" id="login-email">
             <label>Senha: </label>
             <input type="password" name="pass-word" id="login-password">
-            <button type="button" class="botao" onclick="fecharLoginDialog()"><img src="../img/seta-voltar.png" style=" max-height:5vh;color: white;"></button>
+            <button type="button" class="botao" onclick="fecharLoginDialog()">Fechar</button>
             <button type="submit" class="botao">Entrar</button>
             
     
@@ -24,10 +24,10 @@
     
     </dialog>
 
-    <dialog id="CadastroDialog">
+    <dialog id="CadastroDialog" class="caixaDialog">
         <form action="/create-user" method="post">
 
-
+            <h5>CADASTRO</h5>
             <label>Nome: </label>
             <input type="text" name="usuario-nome" id="usuario-nome">
 
@@ -45,9 +45,10 @@
 
             <label>Senha: </label>
             <input type="password" name="pass-word" id="pass-word">
-
-            <button type="submit">Register</button>
+            
             <button type="button" onclick="fecharCadastroDialog()">Fechar</button>
+            <button type="submit" class="botao">Register</button>
+            
 
 
         </form>
@@ -61,9 +62,12 @@
         <div class="logo-site">
             <img class="logoQuick" src="../Imgs/logoGetQuick.png">
         </div>
+            <div>
+                    <H1>ASD</H1>
+            </div>
         <div class="botoes-nav">
-            <button class="botao-login" id="loginBotao" onclick="abrirLoginDialog()">Login</button>
-            <button class="botao-login" onclick="abrirCadastroDialog()" >Cadastro</button>    
+            <button class="botaoLogin" id="loginBotao" onclick="abrirLoginDialog()">Login</button>
+            <button class="botaoLogin" onclick="abrirCadastroDialog()" >Cadastro</button>    
         </div>
     </div>
 
@@ -76,7 +80,7 @@
                 <input type="text" class="txtBusca" placeholder="Unidade"/>
             </div>
             <div>
-                <button class="botao-buscar">Buscar</button>
+                <button class="botaoBuscar">Buscar</button>
             </div>
         </div>
     </div>
