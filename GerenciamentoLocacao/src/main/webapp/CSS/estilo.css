@@ -231,6 +231,19 @@ body.dark{
     padding-left: 20px;
 }
 
+.caixaDialog select {
+  font-family: 'Montserrat', sans-serif;
+  height: 30px;
+  border-radius: 5px;
+  width: 70%;
+  margin-bottom: 30px;
+  padding: 5px;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: inset 0.5px 1px 7px 0.5px rgba(0, 0, 0, 0.5);
+}
+
+
 .caixaDialog input {
     height: 30px;
     border-radius: 5px;
@@ -316,3 +329,24 @@ button:hover {
   .fa-sun {
     color: #f39c12;
   }
+
+
+  /*Carousel*/
+
+  
+.carousel {
+  position: relative;
+  padding: 15px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.galeria-wrapper {
+  overflow-x: auto;
+}
+
+.galeria {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+}

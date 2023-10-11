@@ -35,13 +35,19 @@
             <input type="text" name="usuario-nome" id="usuario-nome">
 
             <label>Email: </label>
-            <input type="text" name="usuario-email" id="usuario-email">
+            <input type="email" name="usuario-email" id="usuario-email">
 
-            <label>Genero: </label>
-            <input type="text" name="usuario-genero" id="usuario-genero">
+            <label for="usuario-genero">Gênero: </label>
+            <select name="usuario-genero" id="usuario-genero">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="naobinario">Não-Binário</option>
+                <option value="outro">Outro</option>
+            </select>
+            
 
             <label>Celular: </label>
-            <input type="text" name="usuario-celular" id="usuario-celular">
+            <input type="tel" name="usuario-celular" id="usuario-celular">
 
             <label>Usuario: </label>
             <input type="text" name="user-name" id="user-name">
@@ -51,7 +57,6 @@
             
             <button type="button" onclick="fecharCadastroDialog()">Fechar</button>
             <button type="submit" class="botao">Register</button>
-            
 
 
         </form>
@@ -100,14 +105,19 @@
             </div>
         </div>
     </div>
-    <div >
-        <div>
-            <h2>
-                SALVE
-            </h2>
+    <!-- Carousel -->
+        <div class="carousel">
+            <button class="arrow-leftControl" aria-label="imagemAnterior">🡨</button>
+            <button class="arrow-rightControl" aria-label="ProximaImagem">🡪</button>
+            <div class="galeria-wrapper">
+                <div class="galeria">
+                <img src="/GerenciamentoLocacao/src/main/img/QuadraBasquete.png" alt="QuadraBasquete" class="item current-item">
+                <img src="/GerenciamentoLocacao/src/main/img/QuadraCoberta.png" alt="QuadraCoberta" class="item current-item">
+                <img src="/GerenciamentoLocacao/src/main/img/QuadraSociety.png" alt="QuadraSociety" class="item current-item">
+                <img src="/GerenciamentoLocacao/src/main/img/QuadraTenis.png" alt="QuadraTenis" class="item current-item">
+                <img src="/GerenciamentoLocacao/src/main/img/QuadraVisaoGeral.png" alt="QuadraVisaoGeral" class="item current-item">
+            </div>
         </div>
-
-    </div>
 
     </header>
     </main>
