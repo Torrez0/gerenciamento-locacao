@@ -198,7 +198,7 @@ body.dark{
       font-weight: 600;
       display: flex;
       flex-wrap: wrap; /* Permite que os elementos se movam para a próxima linha */
-      justify-content:center; /* Distribui os elementos uniformemente nas linhas */
+      justify-content:space-between; /* Distribui os elementos uniformemente nas linhas */
   }
   h6{
     width: 100%;
@@ -279,11 +279,27 @@ body.dark .caixaDialog input{
       box-shadow: none;
 }
   
-  .caixaDialog button {
-      width: 25%; /* Ocupar toda a largura disponível */
+  .caixaDialog .botao {
+    
+      width: 130px; /* Ocupar toda a largura disponível */
       padding: 10px;
-      margin-left: 20px;
+      margin-right: 20px;
+     
+
   }
+
+  .botaoVoltar{
+    width: 60px;
+    margin-left: 120px;
+    
+  }
+
+  .caixaDialog .botaoRegister{
+    width: 130px; /* Ocupar toda a largura disponível */
+    padding: 10px;
+    margin-right: 20px;
+  }
+
 button{
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
