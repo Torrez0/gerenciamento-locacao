@@ -33,3 +33,11 @@ function fecharCadastroDialog(){
         CadastroDialog.close();
 
 }
+
+//DARK MODE
+
+const chk = document.getElementById('btn')
+
+chk.addEventListener('change', () => {
+  document.body.classList.toggle('dark')
+})

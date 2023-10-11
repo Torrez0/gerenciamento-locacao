@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="CSS/estilo.css" media="screen" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body >
+
+
+    <main class="login_form">
 
     <dialog id="loginDialog" class="caixaDialog">
         <form >
@@ -58,20 +61,33 @@
 
 
 <header>
+    
+   
     <div class="header">
         <div class="logo-site">
             <img class="logoQuick" src="../Imgs/logoGetQuick.png">
         </div>
-            <div>
-                    <H1>ASD</H1>
-            </div>
+
         <div class="botoes-nav">
             <button class="botaoLogin" id="loginBotao" onclick="abrirLoginDialog()">Login</button>
             <button class="botaoLogin" onclick="abrirCadastroDialog()" >Cadastro</button>    
         </div>
     </div>
 
+
+
     <div class="container">
+
+        <div>
+            <input type="checkbox" class="checkbox" id="btn" />
+            <label class="label" for="btn">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
+
+
         <div class="campo-busca">
             <div>
                 <input type="text" class="txtBusca" placeholder="Locação"/>
@@ -93,8 +109,12 @@
 
     </div>
 
-</header>
-</main>
+    </header>
+    </main>
+
 <script src="JS/Scripts.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
 </body>
+
+
 </html>
