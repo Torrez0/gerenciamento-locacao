@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/create-user")
+@WebServlet( { "/admin/create-user", "/create-user" })
 public class CreateUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
@@ -28,5 +28,16 @@ public class CreateUserServlet extends HttpServlet {
         new UsuarioDao().createUser(usuario);
 
         httpServletRequest.getRequestDispatcher("index.html").forward(httpServletRequest,httpServletResponse);
+
     }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        req.getRequestDispatcher("index.html").forward(req, resp);
+
+//        resp.sendRedirect("index.html");
+
+    }
+
 }

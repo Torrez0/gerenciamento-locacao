@@ -5,6 +5,7 @@ import br.com.getquick.model.Usuario;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class UsuarioDao {
     public void createUser(Usuario usuario){
@@ -36,5 +37,46 @@ public class UsuarioDao {
             System.out.println("fail in database connection");
 
         }
+    }
+
+    public boolean verificarCredenciais(Usuario usuario){
+
+        String SQL = "SELECT * FROM PESSOA_LOGIN WHERE EMAIL = ?";
+
+        try{
+
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
+
+            System.out.println("success in database connection");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1, usuario.getEmail());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+
+                String senha = resultSet.getString("SENHA");
+
+                if (senha.equals(usuario.getSenha())){
+
+                    return true;
+
+                }
+
+            }
+
+            System.out.println("Sucesso select no email");
+
+        }catch (Exception e){
+
+            System.out.println("Erro: "+ e);
+
+            return false;
+
+        }
+
+
+        return false;
     }
 }
