@@ -371,22 +371,3 @@ button:hover {
   }
 
 
-  /*Carousel*/
-
-  
-.carousel {
-  position: relative;
-  padding: 15px;
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-.galeria-wrapper {
-  overflow-x: auto;
-}
-
-.galeria {
-  display: flex;
-  flex-flow: row nowrap;
-  gap: 15px;
-}
