@@ -10,6 +10,7 @@
     margin: 0 auto;
     z-index: 1; /*Altera a ordem da pilha, para que o botão não tenha conflito 
     com as imagens, fazendo com que funcione em todo o espaço*/
+  
   }
   
   .galeria-wrapper {
@@ -60,6 +61,7 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(to right, transparent 0%, black 200%) ;
+  
   }
   
   .arrow-left:hover,
@@ -76,6 +78,7 @@
     transition: all 600ms ease-in-out;
     transform: scale(1);
     margin: 2px;
+    
   }
 
   .current-item {
