@@ -3,10 +3,10 @@
   
   .carousel {
     position: relative;
-    right: 65vh; /*Altera a posição do carousel para esquerda*/
+    right: 55vh; /*Altera a posição do carousel para esquerda*/
     top: 10vh; /*Altera a posição do carousel de cima para baixo*/
     padding: 15px;
-    max-width: 640px;
+    max-width: 800px;
     margin: 0 auto;
     z-index: 1; /*Altera a ordem da pilha, para que o botão não tenha conflito 
     com as imagens, fazendo com que funcione em todo o espaço*/
@@ -68,12 +68,12 @@
   }
 
   .item {
-    width: 450px; /*altera as larguras das imagens*/
-    height: 250px;
+    width: 500px; /*altera as larguras das imagens*/
+    height: 300px;
     flex-shrink: 0;
     opacity: 0.5;
     border: 1px solid #fff;
-    transition: all 500ms ease-in-out;
+    transition: all 600ms ease-in-out;
     transform: scale(1);
     margin: 2px;
   }
