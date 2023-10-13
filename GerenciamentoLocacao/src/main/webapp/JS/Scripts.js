@@ -42,13 +42,13 @@ chk.addEventListener('change', () => {
   document.body.classList.toggle('dark')
 })
 
-// Carousel 
 
-const controls = document.querySelectorAll('.control'); //seleciona todos os controles do html
-let currentItem = 0; 
-const items = document.querySelectorAll('.item'); // seleciona todos os itens, cada imagem
-const maxItems = items.length; //para saber o tamanho dos itens que temos
-let timer; //variável para o tempo de tela de cada imagem
+// Carousel
+const controls = document.querySelectorAll('.control');
+let currentItem = 0;
+const items = document.querySelectorAll('.item');
+const maxItems = items.length;
+let timer;
 
 //Evento para o clique
 controls.forEach(control => {
@@ -56,7 +56,7 @@ controls.forEach(control => {
         const isLeft = control.classList.contains("arrow-left");
         console.log('control clicked', isLeft);
 
-        if (isLeft) { //verifica as posições do array e acrescenta +1
+        if (isLeft) {
             currentItem -= 1;
         } else {
             currentItem += 1;
@@ -69,38 +69,35 @@ controls.forEach(control => {
             currentItem = maxItems - 1;
         }
 
-        items.forEach(item => item.classList.remove('current-item')); 
-        //remove o item e volta ao inicio
-        items[currentItem].scrollIntoView({
-        inline: "center",
-        behavior: "smooth"
-    });
+        items.forEach(item => item.classList.remove('current-item'));
+        updateCarousel();
 
-    items[currentItem].classList.add("current-item");
-    
-    })
+        items[currentItem].classList.add("current-item");
+    });
 });
 
-//Função do timer para ir ao próximo item
+// Função do timer para ir ao próximo item
 function nextItem() {
-    currentItem = (currentItem + 1) % maxItems; // adiciona o % maxItems, para que não ultrapasse a quantidade de itens do html
-    updateCarousel(); // atualiza o Carousel
+    currentItem = (currentItem + 1) % maxItems;
+    updateCarousel();
 }
- 
-function updateCarousel() { //função que atualiza o carousel, removendo a classe item e adicionando em seguida ao tamanho atual
-    items.forEach(item => item.classList.remove('current-item'));
-    items[currentItem].classList.add("current-item");
 
-    // Centraliza a próxima imagem do carousel
+//atualiza o carousel
+function updateCarousel() {
+    items.forEach(item => item.classList.remove('current-item'));
+
+    items[currentItem].classList.add('current-item'); // função aplica o current-item do css a cada imagem em destaque
+
     items[currentItem].scrollIntoView({
         inline: "center",
         behavior: "smooth"
     });
 }
 
+
 // Função para iniciar o timer adicionando o tempo
 function startAutoSlide() {
-    timer = setInterval(nextItem, 3000); // Milisegundos - 3000ms = 3 seg
+    timer = setInterval(nextItem, 3000);
 }
 
 // Função para parar o timer, ativada quando o mouse interage com o slide
@@ -113,5 +110,5 @@ startAutoSlide();
 
 // Adiciona um evento de foco para reiniciar o timer quando o mouse estiver fora do carousel
 const carousel = document.querySelector('.carousel');
-carousel.addEventListener('mouseenter', stopAutoSlide);  // quando o cursor do mouse tem contato com o slide, chama a função para parar
-carousel.addEventListener('mouseleave', startAutoSlide); // chama a função para iniciar o slide quando o mouse não tem mais contato
+carousel.addEventListener('mouseenter', stopAutoSlide);
+carousel.addEventListener('mouseleave', startAutoSlide);
