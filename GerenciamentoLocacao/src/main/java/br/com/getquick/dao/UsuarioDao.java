@@ -41,32 +41,56 @@ public class UsuarioDao {
 
     public boolean verificarCredenciais(Usuario usuario){
 
-        String SQL = "SELECT * FROM PESSOA_LOGIN WHERE EMAIL = ?";
+        String SQL = "SELECT * FROM PESSOA_LOGIN WHERE EMAIL = ? AND SENHA = ?";
 
         try{
 
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
 
-            System.out.println("success in database connection");
+            //System.out.println("success in database connection");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
             preparedStatement.setString(1, usuario.getEmail());
+            preparedStatement.setString(2, usuario.getSenha());
+
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet.next()){
+           if (resultSet.next()) {
 
-                String senha = resultSet.getString("SENHA");
+               String SQLAdmin = "SELECT * FROM PESSOA_LOGIN WHERE EMAIL = ? AND SENHA = ? AND ADMINISTRADOR = 'Y'";
 
-                if (senha.equals(usuario.getSenha())){
+               try {
 
-                    return true;
+                   connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
-                }
+                   //System.out.println("success in database connection administrador");
 
-            }
+                   preparedStatement = connection.prepareStatement(SQLAdmin);
 
-            System.out.println("Sucesso select no email");
+                   preparedStatement.setString(1, usuario.getEmail());
+                   preparedStatement.setString(2, usuario.getSenha());
+
+                   ResultSet resulAdm = preparedStatement.executeQuery();
+
+                   if (resulAdm.next()) {
+                       System.out.println("usuário é adm");
+                       return true;
+                   }
+
+
+               } catch (Exception e) {
+
+                   System.out.println("Erro: " + e);
+
+                   return false;
+
+               }
+
+               System.out.println("usuário é regular");
+               return true;
+
+           }
 
         }catch (Exception e){
 
