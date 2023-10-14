@@ -1,0 +1,5 @@
+.mapa-senac {
+    width: 100%; /* Ocupa 100% da largura disponível no espaço do mapa */
+    margin-left: 50%;
+    margin-top: 200px; /* Ajusta a margem superior de acordo com a proporção necessário do mapa */
+}

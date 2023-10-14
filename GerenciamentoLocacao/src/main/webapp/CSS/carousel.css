@@ -13,9 +13,16 @@
 
 }
 
+.carousel-container {
+  max-height: 400px; /* Defina uma altura máxima para o contêiner do carousel */
+  overflow: hidden; /* Oculta o conteúdo extra que possa ultrapassar a altura máxima */
+}
+
 .galeria-wrapper {
   overflow-x: auto;
 }
+
+
 
 .galeria {
   display: flex;
@@ -69,6 +76,7 @@
   opacity: 0.75;
 }
 
+
 .item {
   width: 600px; /*altera as larguras das imagens*/
   height: 300px;
@@ -82,10 +90,15 @@
 }
 
 .current-item {
-  width: 700px; /* Aumenta o tamanho da imagem em destaque */
-  height: 400px; /* Aumenta a altura da imagem em destaque */
+  width: 650px; /* Aumenta o tamanho da imagem em destaque */
+  height: 350px; /* Aumenta a altura da imagem em destaque */
   opacity: 1;
   border: 3px solid white;
   box-shadow: 0 0 10px white;
   transform: scale(1.05);
 }
+
+.carousel-tamanhocontainer {
+  height: 350px; /* Faz o ajuste conforme o tamanho do container para não interferir nos outros elementos. */
+}
+

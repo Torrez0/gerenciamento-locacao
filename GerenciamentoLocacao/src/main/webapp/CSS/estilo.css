@@ -369,10 +369,3 @@ button:hover {
   .fa-sun {
     color: #f39c12;
   }
-
-
-  .mapa-senac {
-    position: relative;
-    left: 125vh; /* Ajuste essa propriedade para mover o mapa para a direita */
-    bottom: 250px; /* Ajuste essa propriedade para mover o mapa para baixo */
-}
