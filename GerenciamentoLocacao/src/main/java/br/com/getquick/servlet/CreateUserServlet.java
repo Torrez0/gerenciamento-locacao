@@ -25,7 +25,7 @@ public class CreateUserServlet extends HttpServlet {
         Usuario usuario = new Usuario(usuarioNome, usuarioEmail, usuarioGenero,
                 usuarioCelular, userName, passWord);
 
-        new UsuarioDao().createUser(usuario);
+        new UsuarioDao().criarUsuario(usuario);
 
         httpServletRequest.getRequestDispatcher("index.html").forward(httpServletRequest,httpServletResponse);
 

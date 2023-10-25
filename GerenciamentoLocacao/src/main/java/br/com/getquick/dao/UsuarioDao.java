@@ -69,7 +69,7 @@ public class UsuarioDao {
         return false;
     }
 
-    public void createUser(Usuario usuario) {
+    public void criarUsuario(Usuario usuario) {
         if (emailExiste(usuario.getEmail())) {
             System.out.println("E-mail já está em uso. Não é possível cadastrar.");
             return;
@@ -112,7 +112,7 @@ public class UsuarioDao {
 
                 try (ResultSet resultSet = preparedStatement.executeQuery()) {
                     if (resultSet.next()) {
-                        return checkAdminPrivilege(connection, usuario.getEmail(), usuario.getSenha());
+                        return verificaPrivilegioAdministrador(connection, usuario.getEmail(), usuario.getSenha());
                     }
                 }
             }
@@ -122,7 +122,7 @@ public class UsuarioDao {
         return false;
     }
 
-    private boolean checkAdminPrivilege(Connection connection, String email, String senha) {
+    private boolean verificaPrivilegioAdministrador(Connection connection, String email, String senha) {
         try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ADMIN_SQL)) {
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, senha);
