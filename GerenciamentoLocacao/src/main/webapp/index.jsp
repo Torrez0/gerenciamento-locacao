@@ -17,12 +17,12 @@
     <main class="login_form">
 
     <dialog id="loginDialog" class="caixaDialog">
-        <form >
+        <form action = "/login" method = "post" >
             <h6>LOGIN</h6>
             <label>E-mail: </label>
             <input type="email" name="login-email" id="login-email">
             <label>Senha: </label>
-            <input type="password" name="pass-word" id="login-password">
+            <input type="password" name="login-senha" id="login-senha">
             <button type="button" class="botaoVoltar" onclick="fecharLoginDialog()">🡨</button>
             <button type="submit" class="botao">Entrar</button>
             
