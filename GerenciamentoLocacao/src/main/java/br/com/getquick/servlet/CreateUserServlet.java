@@ -27,16 +27,16 @@ public class CreateUserServlet extends HttpServlet {
 
         new UsuarioDao().criarUsuario(usuario);
 
-        httpServletRequest.getRequestDispatcher("index.html").forward(httpServletRequest,httpServletResponse);
+        httpServletRequest.getRequestDispatcher("index.jsp").forward(httpServletRequest,httpServletResponse);
 
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        req.getRequestDispatcher("index.html").forward(req, resp);
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
 
-//        resp.sendRedirect("index.html");
+//        resp.sendRedirect("index.jsp");
 
     }
 
