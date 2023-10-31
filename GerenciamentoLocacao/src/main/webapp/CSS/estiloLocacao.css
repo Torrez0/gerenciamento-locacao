@@ -22,7 +22,7 @@
 
 }
 body{
-  background: #E4E8F0;
+  
   font-family: 'Montserrat', sans-serif;
   
 }
@@ -53,6 +53,7 @@ body.dark h3{
 }
 
 .container {
+  
     display: flex;
     padding: 25px;
     margin-left: 40px;

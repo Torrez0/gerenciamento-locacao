@@ -6,53 +6,34 @@
 
 
 .carrossel{
-  justify-content: space-between;
+  background-color:#ffffff;
+  justify-content: center;
+  margin-top: 10px;
   width: 100%;
-  height: 300px;
+  height: 400px;
   position: relative;
   
   
 }
 .titulo-quadras{
+  color: #78849E;
 font-family: 'Montserrat', sans-serif;
-padding-top: 40px;
-padding-left: 80px;
+width: 100%;
+text-align: center;
 position: absolute;
 }
 
 .img-quadras{
-  padding-top: 100px;
-  justify-content: space-between;
+  padding-top: 50px;
+  justify-content: center;
   display: flex;
 
 
 }
 .img-quadras img{
-  margin-left: 80px;
+  margin: 10px;
   border-radius: 20px;
-  width: 35%;
+  width: 18%;
   
 }
 
-.img-quadras h2{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 25px;
-  text-align: center;
-  width: 60%;
-  height: 30px;
-  justify-content: center;
-  padding-top: 40px;
-}
-
-.botaoLocacao{  
-
-  font-size: 15px;
-  align-self: center;
-  margin-left: 62%;
-  position: absolute;
-  margin-top: 100px;
-  width: 35vh;
-  height: 6vh;
- 
-}
