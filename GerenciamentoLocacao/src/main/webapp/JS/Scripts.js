@@ -1,10 +1,14 @@
+
+////LOGIN
 //Funcão para abrir a tela de login
 
 function abrirLoginDialog(){
 
     var loginDialog = document.getElementById('loginDialog');
+    var overlay = document.getElementById('overlay');
 
         loginDialog.showModal();
+        overlay.style.display = 'block';
 
 }
 
@@ -12,26 +16,58 @@ function abrirLoginDialog(){
 function fecharLoginDialog(){
 
     var loginDialog = document.getElementById('loginDialog');
+    var overlay = document.getElementById('overlay');
 
         loginDialog.close();
+        overlay.style.display = 'none';
 
 }
 
+
+/////CADASTRO
+//Função para abrir tela Cadastro
 function abrirCadastroDialog(){
 
     var CadastroDialog = document.getElementById('CadastroDialog');
+    var overlay = document.getElementById('overlay');
 
         CadastroDialog.showModal();
+        overlay.style.display = 'block';
 
 }
 
-//Função para fechar tela login
+//Função para fechar tela Cadastro
 function fecharCadastroDialog(){
 
     var CadastroDialog = document.getElementById('CadastroDialog');
+    var overlay = document.getElementById('overlay');
 
         CadastroDialog.close();
+        overlay.style.display = 'none';
 
+}
+
+///////RESERVA
+//Função para abrir tela Reserva
+
+function abrirReservaDialog(){
+
+    var CadastroDialog = document.getElementById('reservaDialog');
+    var overlay = document.getElementById('overlay');
+
+        CadastroDialog.showModal();
+        overlay.style.display = 'block';
+
+}
+
+//Função para fechar tela Reserva
+function fecharReservaDialog(){
+
+    var CadastroDialog = document.getElementById('reservaDialog');
+    var overlay = document.getElementById('overlay');
+
+        CadastroDialog.close();
+        overlay.style.display = 'none';
 }
 
 //DARK MODE

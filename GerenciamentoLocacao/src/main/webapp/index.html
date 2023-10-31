@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/estilo.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="CSS/carousel.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="CSS/mapa.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="CSS/sobre.css" media="screen" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body >
@@ -15,7 +16,7 @@
     <!-- Caixa Dialog Login -->
 
     <main class="login_form">
-
+        <div id="overlay"></div>
     <dialog id="loginDialog" class="caixaDialog">
         <form action = "/login" method = "post" >
             <h6>LOGIN</h6>
@@ -33,7 +34,7 @@
     </dialog>
     
     <!-- Caixa Dialog Cadastro -->
-
+    <div id="overlay"></div>
     <dialog id="CadastroDialog" class="caixaDialog">
         <form action="/create-user" method="post">
 
@@ -75,7 +76,7 @@
    
     <div class="header">
         <div class="logo-site">
-            <img class="logoQuick" src="/img/logoGetQuick.png">
+            <img class="logoQuick" src="./img/logoGetQuick.png">
         </div>
 
         <div class="botoes-nav">
@@ -114,8 +115,12 @@
         </div>
     </div>
 
-    <div>
-        salve
+    <!-- Sobre locação -->
+    <div class="container-sobre">
+        <div class="sobre-texto">
+            Sobre Locação
+        </div>
+        
     </div>
     <!-- Carousel -->
 
@@ -123,8 +128,8 @@
             <h2 class="titulo-quadras"> Locação de Quadras Esportivas - O Seu Espaço de Competição!</h2>
             <div class="img-quadras">
                 
-                <img src="./img/CarrosselAberto.png"/>
-                <img src="./img/CarrosselCoberta.png"/>
+                <img src="./img/CarrosselAberto.png" onclick="window.location.href='./locacao.html';"/>
+                <img src="./img/CarrosselCoberta.png" onclick="window.location.href='./locacao.html';"/>
                <!-- <button class="botaoLocacao">Clique Aqui</button>-->
  
             </div>
