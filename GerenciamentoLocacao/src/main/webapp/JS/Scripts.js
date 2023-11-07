@@ -76,6 +76,19 @@ const chk = document.getElementById('btn')
 
 chk.addEventListener('change', () => {
   document.body.classList.toggle('dark')
+
+  const imagensClaras = document.querySelectorAll('.imagem-clara');
+  const imagensEscuras = document.querySelectorAll('.imagem-escura');
+
+  // Alternar entre as imagens quando o dark e ativado
+  imagensClaras.forEach((imagemClara) => {
+    imagemClara.classList.toggle('hidden');
+  });
+
+  imagensEscuras.forEach((imagemEscura) => {
+    imagemEscura.classList.toggle('hidden');
+  });
+
 })
 
 

@@ -46,4 +46,7 @@ body.dark .carrossel{
   width: 18%;
   
 }
+.testimg.dark img{
+  image: url("../img/CarrosselAberto.png");
+}
 
