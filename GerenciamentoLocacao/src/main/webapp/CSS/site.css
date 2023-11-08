@@ -1,0 +1,64 @@
+/*AZUL HOME - #005594  */
+/*AZUL CLARO HOME - #2966F4  */
+/* AZUL PARTE DE CIMA NAV - #115A90 */
+/*CINZA LETRA - #78849E  */
+/*CINZA BACKGROUND - #E4E8F0  */
+/*LARANJA - #F78B1F  */
+/*LARANJA CLARO - #F6BF86  */
+/*AZUL CLARISSIMO - #29B7F4  */
+
+
+.container-site{
+    background-color:#E4E8F0;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+    height: 300px;
+    position: relative;
+
+}
+
+body.dark .container-site {
+    background-color: #2b2b2b;
+    transition: background 0.5s linear, color 0.5s linear;
+
+}
+
+.sobre-site{
+    padding-top: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    width: 100%;
+    color: #78849E;
+    text-align: center;
+    align-items: center;
+
+}
+
+body.dark .sobre-site{
+    color: #E4E8F0;
+    transition: background 0.5s linear, color 0.5s linear;
+}
+.txtBloco{
+    justify-content: space-evenly;
+    display: flex;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    
+  }
+
+  .txtBloco div{
+    background-color: whitesmoke;
+    color: #005497;
+    width: 22%;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+  }
+  
+body.dark .txtBloco div{
+    background-color: #060608;
+    color: #F78B1F;
+    transition: background 0.5s linear, color 0.5s linear;
+}
