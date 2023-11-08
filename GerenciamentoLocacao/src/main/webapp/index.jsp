@@ -124,24 +124,23 @@
     <div class="txtBloco">
         
         <div>
-            Get Quick é um site desenvolvido por alunos do
-            Centro Universitário Senac. <br>
+            Get Quick desenvolvido por alunos do Senac. <br>
             
         </div>
 
         <div>
-            Você poderá se cadastrar em nosso sistema para <br>
-            realizar as locações de quadras e equipamentos. <br>
+            Sistema de cadastro e locação de equipamentos. <br>
             
         </div>
         <div>
-            Contamos com mais de cinco espaços esportivos <br>
-            disponíveis para reservas.
+            +5 Quadras poliesportivas. <br>
         </div>
 
         <div>
-            tais como quadras de tênis, pista de corrida,
-              laboratório de práticas corporais, quadras society e quadras poliesportivas.
+            Society<br>
+            Poliesportiva <br>
+            Tenis <br>
+            E mais
         </div>
     </div>
     

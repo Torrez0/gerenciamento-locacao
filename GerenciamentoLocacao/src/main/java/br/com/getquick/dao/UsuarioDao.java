@@ -3,6 +3,8 @@ package br.com.getquick.dao;
 import br.com.getquick.model.Usuario;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UsuarioDao {
     private static final String INSERT_SQL = "INSERT INTO PESSOA_LOGIN (NOME,EMAIL,GENERO,CELULAR,USUARIO,SENHA) VALUES (?,?,?,?,?,?)";
@@ -12,7 +14,7 @@ public class UsuarioDao {
     private static final String USUARIO_CHECK_SQL = "SELECT COUNT(*) FROM PESSOA_LOGIN WHERE USUARIO = ?";
     private static final String CELULAR_CHECK_SQL = "SELECT COUNT(*) FROM PESSOA_LOGIN WHERE CELULAR = ?";
     private static final String AGENDAR_LOCACAO = "INSERT INTO RESERVA (DT_INICIO, DT_FIM) VALUES (?, ?) ";
-    private static final String RELATORIO_LOCACAO = "SELECT * FROM RESERVA WHERE DT_INICIO LIKE '%?%'"
+    private static final String RELATORIO_LOCACAO = "SELECT * FROM RESERVA WHERE DT_INICIO LIKE '%?%'";
 
     public boolean emailExiste(String email) {
         try (Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -148,15 +150,15 @@ public class UsuarioDao {
 
             preparedStatement.setString(1, dtInicio);
 
-            preparedStatement.setString(2, dtFim)
+            preparedStatement.setString(2, dtFim);
 
 
-                    if(dtInicio = "" || dtFim = ""){
-                        catch(Exception e){
+                    if(dtInicio == "" || dtFim == ""){
+
                             System.out.println("Data inici ou Data fim da locação não foi informada");
                         }
 
-                    }
+
 
 
         } catch (SQLException e) {
@@ -169,27 +171,35 @@ public class UsuarioDao {
 
     }
 
-    private <List> visualizarLocacoes(Connection connection, String dataLoc){
+    private List<String> visualizarLocacoes(Connection connection, String dataLoc){
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(RELATORIO_LOCACAO)) {
 
-            preparedStatement.setString(1, dataLoc) //Parametro recebera o dia que o ADMINISTRADOR queira filtrar as locações
+            preparedStatement.setString(1, dataLoc); //Parametro recebera o dia que o ADMINISTRADOR queira filtrar as locações
 
-            if(dataLoc = ""){
-                        catch(Exception e){
+            if(dataLoc == ""){
                     System.out.println("Sem data informada");
                 }
 
-            }
+
 
 
         } catch (SQLException e) {
             System.out.println("Erro: " + e.getMessage());
         }
 
-        System.out.println("Lista de relatório"); //Precisa retornar uma lista
+        System.out.println("Lista de relatório");
 
-        return <List>;
+        List<String> listaReservas = new ArrayList<String>();
+
+        listaReservas.add(RELATORIO_LOCACAO);
+
+        System.out.println(listaReservas);
+
+        //Precisa retornar uma lista
+
+
+        return listaReservas;
 
 
     }
