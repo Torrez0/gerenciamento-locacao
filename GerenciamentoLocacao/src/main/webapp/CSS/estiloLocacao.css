@@ -148,20 +148,32 @@ body.dark h3{
     color: #f39c12;
   }
 
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+  }
+
   .main-locacao{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color:#E4E8F0;
+
+
   }
-  .img-locacao{
-   
-    
+  body.dark .main-locacao {
+    background-color: #2b2b2b;
   }
 
   .img-locacao img{
-    width: 150vh;
-    height: 60vh;
+    width: 50vh;
+    height: 30vh;
     border-radius: 20px;
     margin-top: 10px;
 
@@ -169,16 +181,20 @@ body.dark h3{
 
   .img-locacao h1{
    
-    font-size: 250%;
+    font-size: 30px;
     color:#78849E ;
     padding-top: 30px;
   }
-  .img-locacao .dark h1{
- }
+
   .img-locacao h2{
 
     color: #115A90;
     font-size: 3vh;
+  }
+  .horarios h3{
+    font-size: 1.5vh;
+    color:#78849E;
+    
   }
 
   .horarios{
@@ -189,11 +205,7 @@ body.dark h3{
     
   }
   
-  .horarios h3{
-    font-size: 3vh;
-    color:#78849E;
-    
-  }
+
 
   .botao-pai{
     display: flex;
@@ -204,8 +216,8 @@ body.dark h3{
   button {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 20px;
-    width: 20vh;
+    font-size: 15px;
+    width: 12vh;
     height: 5vh;
     background: #f78b1f;
     color: #fff;
@@ -348,3 +360,5 @@ body.dark .caixaDialog input{
     margin-left: 120px;
     
   }
+
+ 

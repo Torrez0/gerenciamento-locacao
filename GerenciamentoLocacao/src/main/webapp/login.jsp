@@ -82,8 +82,8 @@
             </div>
 
             <div class="botoes-nav">
-                <button class="botaoLogin" id="loginBotao" onclick="abrirLoginDialog()">Login</button>
-                <button class="botaoLogin" onclick="abrirCadastroDialog()" >Cadastro</button>
+                <button class="botaoLogin" id="loginBotao" onclick="abrirLoginDialog()">Minhas Locações</button>
+               <!-- <button class="botaoLogin" onclick="abrirCadastroDialog()" >Cadastro</button>-->
             </div>
         </div>
 
@@ -177,7 +177,7 @@
             <h2 class="titulo-quadras"> Locação de Quadras Esportivas - O Seu Espaço de Competição!</h2>
             <div class="img-quadras">
 
-                <img class="testimg" src="./img/CarrosselAberto.png" onclick="window.location.href='./locacao.html';"/>
+                <img class="testimg" src="./img/CarrosselAberto.png" onclick="window.location.href='./locacao.jsp';"/>
                 <img class="testimg" src="./img/CarrosselCoberta.png" onclick="window.location.href='./locacao.html';"/>
                 <!-- <button class="botaoLocacao">Clique Aqui</button>-->
 

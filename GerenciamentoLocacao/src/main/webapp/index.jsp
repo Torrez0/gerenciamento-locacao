@@ -2,7 +2,6 @@
 <html >
 <head>
     <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
     <meta http-equiv="Content-Type" content="text/html" charset=UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/carousel.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="CSS/mapa.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="CSS/sobre.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="CSS/site.css" media="screen" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body >
@@ -115,41 +114,6 @@
         </div>
     </div>
 
- <!-- Conheça nosso site -->
-
- <div class="container-site">
-    
-    <div class="sobre-site">
-        Conheça nosso site
-    </div>
-    <div class="txtBloco">
-        
-        <div>
-            Get Quick desenvolvido por alunos do Senac. <br>
-            
-        </div>
-
-        <div>
-            Sistema de cadastro e locação de equipamentos. <br>
-            
-        </div>
-        <div>
-            +5 Quadras poliesportivas. <br>
-        </div>
-
-        <div>
-            Society<br>
-            Poliesportiva <br>
-            Tenis <br>
-            E mais
-        </div>
-    </div>
-    
-
-
- </div>
-
-
     <!-- Sobre locação -->
     <div class="container-sobre">
 
@@ -177,8 +141,8 @@
             <h2 class="titulo-quadras"> Locação de Quadras Esportivas - O Seu Espaço de Competição!</h2>
             <div class="img-quadras">
                 
-                <img class="testimg" src="./img/CarrosselAberto.png" onclick="window.location.href='./locacao.html';"/>
-                <img class="testimg" src="./img/CarrosselCoberta.png" onclick="window.location.href='./locacao.html';"/>
+                <img class="testimg" src="./img/CarrosselAberto.png" onclick="window.location.href='';"/>
+                <img class="testimg" src="./img/CarrosselCoberta.png" onclick="window.location.href='';"/>
                <!-- <button class="botaoLocacao">Clique Aqui</button>-->
  
             </div>
