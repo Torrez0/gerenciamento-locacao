@@ -140,3 +140,10 @@ startAutoSlide();
 const carousel = document.querySelector('.carousel');
 carousel.addEventListener('mouseenter', stopAutoSlide);
 carousel.addEventListener('mouseleave', startAutoSlide);
+
+
+
+
+
+
+

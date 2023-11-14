@@ -44,6 +44,7 @@
             </div>
         </div>
     </header>
+    
 
     <!--IMAGEM QUADRA Sintetica (1)-->
     <main>
@@ -57,7 +58,7 @@
                     <h3>Segunda a Sabado <br>08h às 22h</h3>
                     <h3>Av.Eng. Eusébio <br>Stevaux, 823</h3>
                     <div class="botao-pai">
-                        <button class="botaoReserve" onclick="window.location.href='./reserva.html';">Reserve já</button>
+                        <button class="botaoReserve" onclick="window.location.href='./reserva.html';">Reservar</button>
                     </div>
                 </div>
             </div>
@@ -74,7 +75,7 @@
                     <h3>Segunda a Sabado <br>08h às 22h</h3>
                     <h3>Av.Eng. Eusébio <br>Stevaux, 823</h3>
                     <div class="botao-pai">
-                        <button class="botaoReserve" onclick="window.location.href='./reserva.html';">Reserve já</button>
+                        <button class="botaoReserve" onclick="window.location.href='./reserva.html';">Reservar</button>
                     </div>
                 </div>
             </div>
@@ -91,7 +92,7 @@
                     <h3>Segunda a Sabado <br>08h às 22h</h3>
                     <h3>Av.Eng. Eusébio <br>Stevaux, 823</h3>
                     <div class="botao-pai">
-                        <button class="botaoReserve" onclick="window.location.href='./reserva.html';">Reserve já</button>
+                        <button class="botaoReserve" onclick="window.location.href='./reserva.html';">Reservar</button>
                     </div>
                 </div>
             </div>
@@ -108,7 +109,7 @@
                     <h3>Segunda a Sabado <br>08h às 22h</h3>
                     <h3>Av.Eng. Eusébio <br>Stevaux, 823</h3>
                     <div class="botao-pai">
-                        <button class="botaoReserve" onclick="window.location.href='./reservas/reserva.html';">Reserve já</button>
+                        <button class="botaoReserve" onclick="window.location.href='./reservas/reserva.html';">Reservar</button>
                     </div>
                 </div>
             </div>
@@ -125,7 +126,7 @@
                     <h3>Segunda a Sabado <br>08h às 22h</h3>
                     <h3>Av.Eng. Eusébio <br>Stevaux, 823</h3>
                     <div class="botao-pai">
-                        <button class="botaoReserve" onclick="window.location.href='./reserva.html';">Reserve já</button>
+                        <button class="botaoReserve" onclick="window.location.href='./reserva.html';">Reservar</button>
                     </div>
                 </div>
             </div>
@@ -142,7 +143,7 @@
                     <h3>Segunda a Sabado <br>08h às 22h</h3>
                     <h3>Av.Eng. Eusébio <br>Stevaux, 823</h3>
                     <div class="botao-pai">
-                        <button class="botaoReserve" onclick="window.location.href='./reserva.html';">Reserve já</button>
+                        <button class="botaoReserve" onclick="window.location.href='./reserva.html';">Reservar</button>
                     </div>
                 </div>
             </div>

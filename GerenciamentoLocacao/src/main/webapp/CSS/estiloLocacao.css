@@ -56,22 +56,24 @@ body.dark h3{
   }
 
 .logoQuick{
+    height:110px;
+    padding-right: 260px;
+    margin-top:30px ;
+}
 
-    size: 20px;
-    height: 80px;
-    padding-left: 30px;
-    padding-top: 10px;
+.botoes-locacao{
+  margin: 50px;
 }
 
 .container {
-  
+    height:100%;
     display: flex;
     padding: 25px;
     margin-left: 40px;
     border-radius: 0px 0px 20px 20px;
     position: relative;
     z-index: 1;
-    justify-content: space-between;
+    justify-content: end;
   }
 
 
@@ -97,14 +99,19 @@ body.dark h3{
   }
 
   
-.header.logo-site{
-    height: 500px;
+.logo-site{
+    height: 100px;
+    width: 70%;
 }
  /* DARK MODE */
 
  .checkbox {
     opacity: 0;
     position: absolute;
+  }
+
+  .botaoDark{
+    padding-left: 40px
   }
   
   .label {
@@ -114,7 +121,6 @@ body.dark h3{
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
     padding: 5px;
     position: relative;
     height: 26px;
@@ -176,6 +182,7 @@ main{
     height: 30vh;
     border-radius: 20px;
     margin-top: 10px;
+    margin-bottom: 10px;
 
   }
 
@@ -189,7 +196,7 @@ main{
   .img-locacao h2{
 
     color: #115A90;
-    font-size: 3vh;
+    font-size: 2vh;
   }
   .horarios h3{
     font-size: 1.5vh;
@@ -216,7 +223,7 @@ main{
   button {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 1.5vh;
     width: 12vh;
     height: 5vh;
     background: #f78b1f;
@@ -236,7 +243,11 @@ main{
     border: 0px solid #eee;
     border-radius: 9px;
     text-shadow: none;
+    
+    }
 
+    .botaolocacao{
+      margin-bottom: 20px;
     }
 
     

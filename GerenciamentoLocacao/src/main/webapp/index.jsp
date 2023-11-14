@@ -9,6 +9,9 @@
     <link rel="stylesheet" type="text/css" href="CSS/carousel.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="CSS/mapa.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="CSS/sobre.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="CSS/site.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="CSS/select.css" media="screen" />
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -69,9 +72,6 @@
         </form>
     </dialog>
 
-
-
-
 <header>
     
    
@@ -103,7 +103,11 @@
     <!-- BUSCAR -->
         <div class="campo-busca">
             <div>
-                <input type="text" class="txtBusca" placeholder="Locação"/>
+                <select name="unidades-senac" class="txtBusca" id="unidades-senac">
+                    <option value="senac">Senac Santo Amaro</option>
+                    <option value="aclimacao">Senac Aclimação</option>
+                    <option value="itaquera">Senac Itaquera</option>
+                </select>
             </div>
             <div >
                 <input type="text" class="txtBusca" placeholder="Unidade"/>
@@ -113,6 +117,38 @@
             </div>
         </div>
     </div>
+     <!-- Conheça nosso site -->
+
+     <div class="container-site">
+
+        <div class="sobre-site">
+            Conheça nosso site
+        </div>
+        <div class="txtBloco">
+
+            <div>
+                Get Quick desenvolvido por alunos do Senac. <br>
+
+            </div>
+
+            <div>
+                Sistema de cadastro e locação de equipamentos. <br>
+
+            </div>
+            <div>
+                +5 Quadras poliesportivas. <br>
+            </div>
+
+            <div>
+                Society<br>
+                Poliesportiva <br>
+                Tenis <br>
+                E mais
+            </div>
+        </div>
+
+    </div>
+
 
     <!-- Sobre locação -->
     <div class="container-sobre">
