@@ -178,7 +178,7 @@
             <div class="img-quadras">
 
                 <img class="testimg" src="./img/CarrosselAberto.png" onclick="window.location.href='./locacao.jsp';"/>
-                <img class="testimg" src="./img/CarrosselCoberta.png" onclick="window.location.href='./locacao.html';"/>
+                <img class="testimg" src="./img/CarrosselCoberta.png" onclick="window.location.href='./locacao.jsp';"/>
                 <!-- <button class="botaoLocacao">Clique Aqui</button>-->
 
             </div>
