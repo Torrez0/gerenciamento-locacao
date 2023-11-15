@@ -2,6 +2,7 @@
 <html >
 <head>
     <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
     <meta http-equiv="Content-Type" content="text/html" charset=UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +25,7 @@
     <dialog id="loginDialog" class="caixaDialog">
         <form action = "/login" method = "post" >
             <h6>LOGIN</h6>
+            <span>${requestScope.message}</span>
             <label>E-mail: </label>
             <input type="email" name="login-email" id="login-email">
             <label>Senha: </label>

@@ -85,6 +85,10 @@
                 <button class="botaoLogin" id="loginBotao" onclick="abrirLoginDialog()">Minhas Locações</button>
                <!-- <button class="botaoLogin" onclick="abrirCadastroDialog()" >Cadastro</button>-->
             </div>
+            <c:if test="${sessionScope.usuarioLogado != null}">
+                <span>${sessionScope.usuarioLogado}</span>
+                <a href="/logout">Logout</a>
+            </c:if>
         </div>
 
 

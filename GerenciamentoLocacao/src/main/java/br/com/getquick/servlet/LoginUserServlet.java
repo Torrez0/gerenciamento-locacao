@@ -34,14 +34,14 @@ public class LoginUserServlet extends HttpServlet {
 
             req.getSession().setAttribute("usuarioLogado", usuario.getEmail());
 
-            resp.sendRedirect("/create-user");
+            resp.sendRedirect("/login.jsp");
 
         } else {
 
             req.setAttribute("message", "Credenciais invalidas");
             req.setAttribute("usuarioLogado", false);
 
-            req.getRequestDispatcher("login.jsp").forward(req, resp);
+            req.getRequestDispatcher("index.jsp").forward(req, resp);
 
         }
 
