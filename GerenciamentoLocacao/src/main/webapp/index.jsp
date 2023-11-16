@@ -29,7 +29,7 @@
             <label>E-mail: </label>
             <input type="email" name="login-email" id="login-email">
             <label>Senha: </label>
-            <input type="password" name="login-senha" id="login-senha">
+            <input type="password" name="login-senha" id="login-senha" class="inputAll">
             <button type="button" class="botaoVoltar" onclick="fecharLoginDialog()">🡨</button>
             <button type="submit" class="botao">Entrar</button>
             

@@ -236,6 +236,11 @@ main{
 
     }
 
+  body.dark button{
+    
+
+  }
+
     button:hover{
 
     background: #f1b477de;
@@ -251,12 +256,13 @@ main{
     }
 
     
-    .caixaDialog {
+    .caixaDialogReserva {
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 400px; /* Ajuste a largura conforme necessário */
+      width: 500px; /* Ajuste a largura conforme necessário */
+      height: 550px;
       padding: 20px;
       background-color: #E4E8F0;
       z-index: 1;
@@ -264,20 +270,21 @@ main{
       border-radius: 20px;
   }
 
-  body.dark .caixaDialog{
+  body.dark .caixaDialogReserva{
     background-color: #1F1F23;
     color: white ;
   }
   
 
 
-  .caixaDialog form {
+  .caixaDialogReserva form {
       font-family: 'Montserrat', sans-serif;
       font-weight: 600;
       display: flex;
       flex-wrap: wrap; /* Permite que os elementos se movam para a próxima linha */
       justify-content:space-between; /* Distribui os elementos uniformemente nas linhas */
   }
+
   h6{
     width: 100%;
     margin-bottom: 30px;
@@ -286,10 +293,20 @@ main{
     font-size: 20px;
     color: #78849E;
   }
-
+  
   body.dark h6{
     color: whitesmoke;
   }
+  
+  .h6{
+    width: 100%;
+    margin-bottom: 30px;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    color: #78849E;
+  }
+  
 
   h5{
     width: 100%;
@@ -304,41 +321,41 @@ main{
     color: whitesmoke;
   }
 
-  .caixaDialog label {
+  h4{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+    align-items: center;
+    font-size: 15px;
+    color: #2c2c2c;
+  }
+
+  body.dark h4{
+    color: whitesmoke;
+  }
+
+  .h3{
+    margin-bottom: 5px;
+    margin-right: 12px;
+    padding-top: 3px;
+    font-size: 15px;
+    color: #2c2c2c;
+    text-align: center;
+  }
+
+  .caixaDialogReserva label {
     color: #78849E;
     width: 30%; /* Define o tamanho fixo do rótulo, ajuste conforme necessário */
     margin-bottom: 7px;
     box-sizing: border-box;
     padding-left: 20px;
 }
-body.dark .caixaDialog label{
+body.dark .caixaDialogReserva label{
 
   color: whitesmoke;
 }
 
-.caixaDialog select {
-  font-family: 'Montserrat', sans-serif;
-  height: 30px;
-  border-radius: 5px;
-  width: 70%;
-  margin-bottom: 30px;
-  padding: 5px;
-  box-sizing: border-box;
-  border: none;
-  box-shadow: inset 0.5px 1px 7px 0.5px rgba(0, 0, 0, 0.5);
-
-}
-
-body.dark .caixaDialog select{
-      background-color: #2c2c2c;
-      transition: background 0.5s linear, color 0.5s linear;
-      outline: 1px solid white;
-      box-shadow: none;
-      color: white;
-}
-
-
-.caixaDialog input {
+.caixaDialogReserva .inputAll {
     height: 30px;
     border-radius: 5px;
     width: 70%; /* Faz com que o campo de entrada ocupe todo o espaço restante */
@@ -350,14 +367,14 @@ body.dark .caixaDialog select{
     
 }
 
-body.dark .caixaDialog input{
+body.dark .caixaDialogReserva .inputAll{
       background-color: #2c2c2c;
       transition: background 0.5s linear, color 0.5s linear;
       outline: 1px solid white;
       box-shadow: none;
 }
   
-  .caixaDialog .botao {
+  .caixaDialogReserva .botao {
     
       width: 130px; /* Ocupar toda a largura disponível */
       padding: 10px;
@@ -371,5 +388,31 @@ body.dark .caixaDialog input{
     margin-left: 120px;
     
   }
-
  
+.caixaDialogReserva select {
+  font-family: 'Montserrat', sans-serif;
+  height: 30px;
+  border-radius: 5px;
+  width: 25%;
+  margin-bottom: 30px;
+  padding: 5px;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: inset 0.5px 1px 7px 0.5px rgba(0, 0, 0, 0.5);
+
+}
+
+body.dark .caixaDialogReserva select{
+      background-color: #2c2c2c;
+      transition: background 0.5s linear, color 0.5s linear;
+      outline: 1px solid white;
+      box-shadow: none;
+      color: white;
+}
+  .reservaHorario{
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+

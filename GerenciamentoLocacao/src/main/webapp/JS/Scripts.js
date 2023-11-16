@@ -47,6 +47,29 @@ function fecharCadastroDialog(){
 
 }
 
+/////RESERVA
+//Função para abrir tela Reserva
+function abrirReserva(){
+
+    var CadastroDialog = document.getElementById('reservaDialog');
+    var overlay = document.getElementById('overlay');
+
+        CadastroDialog.showModal();
+        overlay.style.display = 'block';
+
+}
+
+//Função para fechar tela Reserva
+function fecharReserva(){
+
+    var CadastroDialog = document.getElementById('reservaDialog');
+    var overlay = document.getElementById('overlay');
+
+        CadastroDialog.close();
+        overlay.style.display = 'none';
+
+}
+
 
 
 //DARK MODE
