@@ -16,6 +16,8 @@ public class UsuarioDao {
     private static final String AGENDAR_LOCACAO = "INSERT INTO RESERVA (DT_INICIO, DT_FIM) VALUES (?, ?) ";
     private static final String RELATORIO_LOCACAO = "SELECT * FROM RESERVA WHERE DT_INICIO LIKE '%?%'";
 
+    private static final String USUARIO = "SELECT USUARIO FROM PESSOA_LOGIN WHERE EMAIL = ? AND SENHA = ?";
+
     public boolean emailExiste(String email) {
         try (Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
              PreparedStatement preparedStatement = connection.prepareStatement(EMAIL_CHECK_SQL)) {
@@ -126,6 +128,30 @@ public class UsuarioDao {
         return false;
     }
 
+    public String retornaUsuario(Usuario usuario){
+
+        String usuario1 = "null";
+
+        try (Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa")) {
+            try (PreparedStatement preparedStatement = connection.prepareStatement(USUARIO)) {
+                preparedStatement.setString(1, usuario.getEmail());
+                preparedStatement.setString(2, usuario.getSenha());
+
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    if (resultSet.next()) {
+                        usuario1 = String.valueOf(resultSet.next());
+                        System.out.println(usuario1);
+                        return usuario1;
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+        return usuario1;
+    }
+
+
     private boolean verificaPrivilegioAdministrador(Connection connection, String email, String senha) {
         try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ADMIN_SQL)) {
             preparedStatement.setString(1, email);
@@ -203,5 +229,6 @@ public class UsuarioDao {
 
 
     }
+
 
 }

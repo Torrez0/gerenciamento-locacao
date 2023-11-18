@@ -1,12 +1,15 @@
 package br.com.getquick.dao;
 
+import br.com.getquick.model.Usuario;
+
 import java.sql.*;
 
 public class LocacaoDao {
 
     private static final String INSERT_LOCACAO = "INSERT INTO RESERVA (dataInicio, dataFim, usuarioReserva) VALUES (?,?,?)";
 
-    public boolean emailExiste(String usuario, String dataInicio, String dataFim) {
+    public boolean locacao(String usuario, String dataInicio, String dataFim) {
+
         try (Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_LOCACAO)) {
 
@@ -26,6 +29,7 @@ public class LocacaoDao {
 
         return false;
     }
+
 
 }
 
