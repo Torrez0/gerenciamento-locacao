@@ -2,34 +2,37 @@ package br.com.getquick.model;
 
 public class Locacao {
 
-    private String emailUsuario;
-
+    private String usuario;
     private String nomeQuadra;
+    private String dataLocacaoIni;
+    private String dataLocacaoFim;
 
-    private String dataLocacao;
+   // private String horarioLocacao;
 
-    private String horarioLocacao;
-
-    public Locacao(String emailUsuario, String nomeQuadra, String dataLocacao, String horarioLocacao) {
-        this.emailUsuario = emailUsuario;
+    public Locacao(String nomeQuadra, String dataLocacaoIni, String dataLocacaoFim, String usuario) {
+        this.usuario = usuario;
         this.nomeQuadra = nomeQuadra;
-        this.dataLocacao = dataLocacao;
-        this.horarioLocacao = horarioLocacao;
+        this.dataLocacaoIni = dataLocacaoIni;
+        this.dataLocacaoFim = dataLocacaoFim;
+       // this.horarioLocacao = horarioLocacao;
     }
 
     public String getEmailUsuario() {
-        return emailUsuario;
+        return usuario;
     }
 
     public String getNomeQuadra() {
         return nomeQuadra;
     }
 
-    public String getDataLocacao() {
-        return dataLocacao;
+    public String getDataLocacaoIni() {
+        return dataLocacaoIni;
     }
 
-    public String getHorarioLocacao() {
+    public String getDataLocacaoFim() {return dataLocacaoFim; }
+
+    // Não teremos a hora da locação, pq no trigger ele injeta a data automatica na tabela de apoio
+    /* public String getHorarioLocacao() {
         return horarioLocacao;
-    }
+    } */
 }
