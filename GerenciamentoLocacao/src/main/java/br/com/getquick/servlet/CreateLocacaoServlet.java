@@ -17,15 +17,15 @@ public class CreateLocacaoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String userUsuario = (String) req.getSession().getAttribute("usuarioLogado");
-
         String quadraNome = req.getParameter("id do html");
 
         String dataLocIni = req.getParameter("id data inicio");
 
         String dataLocFim = req.getParameter("id data fim");
 
-        Locacao loc = new Locacao(userUsuario, quadraNome, dataLocIni, dataLocFim);
+        String userUsuario = (String) req.getSession().getAttribute("usuarioLogado");
+
+        Locacao loc = new Locacao(quadraNome, dataLocIni, dataLocFim, userUsuario);
 
         new LocacaoDao().locacao(userUsuario, quadraNome, dataLocIni, dataLocFim);
 
