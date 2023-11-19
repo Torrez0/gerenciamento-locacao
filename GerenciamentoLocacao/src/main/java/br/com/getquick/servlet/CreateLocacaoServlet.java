@@ -31,7 +31,16 @@ public class CreateLocacaoServlet extends HttpServlet {
 
         new LocacaoDao().locacao(userUsuario, quadraNome, dataLocIni, dataLocFim, idLocavel);
 
-        req.getRequestDispatcher("aqui entra o arquivo . jsp").forward(req,resp); //HELP HERE
+        req.getRequestDispatcher("locacao.jsp").forward(req,resp); //HELP HERE
+
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        req.getRequestDispatcher("locacao.jsp").forward(req, resp);
+
+//        resp.sendRedirect("index.jsp");
 
     }
 }
