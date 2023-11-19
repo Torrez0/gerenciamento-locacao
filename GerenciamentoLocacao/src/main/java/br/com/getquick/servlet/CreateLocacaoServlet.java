@@ -25,9 +25,11 @@ public class CreateLocacaoServlet extends HttpServlet {
 
         String userUsuario = (String) req.getSession().getAttribute("usuarioLogado");
 
-        Locacao loc = new Locacao(quadraNome, dataLocIni, dataLocFim, userUsuario);
+        int idLocavel = Integer.parseInt(req.getParameter("id quadra"));
 
-        new LocacaoDao().locacao(userUsuario, quadraNome, dataLocIni, dataLocFim);
+        Locacao loc = new Locacao(quadraNome, dataLocIni, dataLocFim, userUsuario, idLocavel);
+
+        new LocacaoDao().locacao(userUsuario, quadraNome, dataLocIni, dataLocFim, idLocavel);
 
         req.getRequestDispatcher("aqui entra o arquivo . jsp").forward(req,resp); //HELP HERE
 
