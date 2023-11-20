@@ -4,6 +4,9 @@ import br.com.getquick.model.Locacao;
 import br.com.getquick.model.Usuario;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class LocacaoDao {
 
@@ -29,12 +32,74 @@ public class LocacaoDao {
 
     }
 
-    public int idLocavel(){
+    public int idLocavel() {
         //Essa classe precisa pegar o id da quadra selecionada para fazer uma consulta no banco;
 
         return 1; //RETORNA O ID DA QUADRA
     }
 
+    public List<Locacao> listarLocacoes(String usuario) {
+        String listarLocacao = "SELECT * FROM RESERVA WHERE USUARIO = ?";
+
+        try (Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa")) {
+            System.out.println("success in database connection");
+
+            try (PreparedStatement preparedStatement = connection.prepareStatement(listarLocacao)) {
+                preparedStatement.setString(1, usuario);
+
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    List<Locacao> locacoes = new ArrayList<>();
+
+                    while (resultSet.next()) {
+                        String idLocacao = resultSet.getString("ID_RESERVA");
+                        String nomeLocavel = resultSet.getString("NOME_LOCAVEL");
+                        String dataLocacaoIni = resultSet.getString("DT_INICIO");
+                        String dataLocacaoFim = resultSet.getString("DT_FIM");
+                        String usuarioReserva = resultSet.getString("USUARIO");
+
+                        Locacao locacao = new Locacao(idLocacao ,nomeLocavel, dataLocacaoIni, dataLocacaoFim, usuarioReserva, "");
+                        locacoes.add(locacao);
+                    }
+
+                    System.out.println("success in select * car");
+
+                    return locacoes;
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println("fail in database connection: " + e.getMessage());
+            return Collections.emptyList();
+        }
+
+
+    }
+
+
+    public void deleteLocacao(String idLocacao){
+
+        String SQL = "DELETE RESERVA WHERE ID = ?";
+
+        try {
+
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+
+            System.out.println("success in database connection");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setString(1, idLocacao);
+            preparedStatement.execute();
+
+            System.out.println("success on delete car with id: " + idLocacao);
+
+            connection.close();
+
+        } catch (Exception e) {
+
+            System.out.println("fail in database connection");
+
+        }
+
+    }
 
 }
 

@@ -2,6 +2,7 @@ package br.com.getquick.model;
 
 public class Locacao {
 
+    private String id;
     private String usuario;
     private String nomeQuadra;
     private String dataLocacaoIni;
@@ -18,6 +19,24 @@ public class Locacao {
         this.dataLocacaoFim = dataLocacaoFim;
         this.idLocavel = idLocavel;
        // this.horarioLocacao = horarioLocacao;
+    }
+    public Locacao(String id, String nomeQuadra, String dataLocacaoIni, String dataLocacaoFim, String usuario, String idLocavel) {
+        this.id = id;
+        this.usuario = usuario;
+        this.nomeQuadra = nomeQuadra;
+        this.dataLocacaoIni = dataLocacaoIni;
+        this.dataLocacaoFim = dataLocacaoFim;
+        this.idLocavel = idLocavel;
+        // this.horarioLocacao = horarioLocacao;
+    }
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNomeQuadra() {
