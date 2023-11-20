@@ -57,7 +57,7 @@ public class LocacaoDao {
                         String dataLocacaoFim = resultSet.getString("DT_FIM");
                         String usuarioReserva = resultSet.getString("USUARIO");
 
-                        Locacao locacao = new Locacao(idLocacao ,nomeLocavel, dataLocacaoIni, dataLocacaoFim, usuarioReserva, "");
+                        Locacao locacao = new Locacao(idLocacao, nomeLocavel, dataLocacaoIni, dataLocacaoFim, usuarioReserva, "");
                         locacoes.add(locacao);
                     }
 
@@ -75,7 +75,7 @@ public class LocacaoDao {
     }
 
 
-    public void deleteLocacao(String idLocacao){
+    public void deleteLocacao(String idLocacao) {
 
         String SQL = "DELETE RESERVA WHERE ID = ?";
 
@@ -97,6 +97,40 @@ public class LocacaoDao {
 
             System.out.println("fail in database connection");
 
+        }
+
+    }
+
+    public List<Locacao> listarLocacoesRelatorio() {
+        String listarLocacao = "SELECT ID_RESERVA,  NOME_LOCAVEL, FORMATDATETIME(DT_INICIO, 'dd/MM/YYYY HH:mm') AS \"DATA INÍCIO\", FORMATDATETIME(DT_FIM, 'dd/MM/YYYY HH:mm') AS \"DATA FIM\", USUARIO FROM RESERVA";
+
+        try (Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa")) {
+            System.out.println("success in database connection");
+
+            try (PreparedStatement preparedStatement = connection.prepareStatement(listarLocacao)) {
+
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    List<Locacao> locacoesAdmin = new ArrayList<>();
+
+                    while (resultSet.next()) {
+                        String idLocacao = resultSet.getString("ID_RESERVA");
+                        String nomeLocavel = resultSet.getString("NOME_LOCAVEL");
+                        String dataLocacaoIni = resultSet.getString("DATA INÍCIO");
+                        String dataLocacaoFim = resultSet.getString("DATA FIM");
+                        String usuarioReserva = resultSet.getString("USUARIO");
+
+                        Locacao locacao = new Locacao(idLocacao, nomeLocavel, dataLocacaoIni, dataLocacaoFim, usuarioReserva, "");
+                        locacoesAdmin.add(locacao);
+                    }
+
+                    //System.out.println("success in select * car");
+
+                    return locacoesAdmin;
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println("fail in database connection: " + e.getMessage());
+            return Collections.emptyList();
         }
 
     }
