@@ -1,7 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html >
 <head>
-    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+   
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
     <meta http-equiv="Content-Type" content="text/html" charset=UTF-8>
@@ -112,7 +113,11 @@
                 </select>
             </div>
             <div >
-                <input type="text" class="txtBusca" placeholder="Unidade"/>
+                <select name="espaco-senac" class="txtBusca" id="espaco-senac">
+                    <option value="Sintetica">Sintetica</option>
+                    <option value="volei">Volei</option>
+                    <option value="Basquete">Basquete</option>
+                </select>
             </div>
             <div>
                 <button class="botaoBuscar">Buscar</button>

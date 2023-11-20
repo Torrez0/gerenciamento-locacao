@@ -83,12 +83,13 @@
 
             <div class="botoes-nav">
                 <button class="botaoLogin" id="loginBotao" onclick="abrirLoginDialog()">Minhas Locações</button>
-               <!-- <button class="botaoLogin" onclick="abrirCadastroDialog()" >Cadastro</button>-->
+
+                <c:if test="${sessionScope.usuarioLogado != null}">
+                    <button onclick="window.location.href='/logout';"class="botaoLogin">Logout</button>
+                    <span>${sessionScope.usuarioLogado}</span>
+                </c:if><!-- <button class="botaoLogin" onclick="abrirCadastroDialog()" >Cadastro</button>-->
             </div>
-            <c:if test="${sessionScope.usuarioLogado != null}">
-                <span>${sessionScope.usuarioLogado}</span>
-                <a href="/logout">Logout</a>
-            </c:if>
+            
         </div>
 
 
@@ -108,10 +109,18 @@
             <!-- BUSCAR -->
             <div class="campo-busca">
                 <div>
-                    <input type="text" class="txtBusca" placeholder="Locação"/>
+                    <select name="unidades-senac" class="txtBusca" id="unidades-senac">
+                        <option value="senac">Senac Santo Amaro</option>
+                        <option value="aclimacao">Senac Aclimação</option>
+                        <option value="itaquera">Senac Itaquera</option>
+                    </select>
                 </div>
                 <div >
-                    <input type="text" class="txtBusca" placeholder="Unidade"/>
+                    <select name="espaco-senac" class="txtBusca" id="espaco-senac">
+                        <option value="Sintetica">Sintetica</option>
+                        <option value="volei">Volei</option>
+                        <option value="Basquete">Basquete</option>
+                    </select>
                 </div>
                 <div>
                     <button class="botaoBuscar">Buscar</button>

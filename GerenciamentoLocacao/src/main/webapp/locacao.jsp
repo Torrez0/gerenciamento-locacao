@@ -17,15 +17,13 @@
 
     <dialog id="reservaDialog" class="caixaDialogReserva">
         <form action="/reserva" method="post">
-            <h6 class="H6">Quadra Sentética</h6>
+            <h6 class="H6" id="sintetica">Quadra Sentética</h6>
 
             <h4>Escolha a data</h4>
-
-            <table id="calendar" onclick="reserveDate(event)">
-                <!-- Os dias serão adicionados aqui usando JavaScript -->
-              </table>
+            <input type="date" value="date" class="calendario" />
 
             <div class="reservaHorario">
+                
                 <h3 class="h3">Escolha a Horario: </h3>
                 
             <select name="horario-sintetica" id="horario-sintetica" class="inputTime">

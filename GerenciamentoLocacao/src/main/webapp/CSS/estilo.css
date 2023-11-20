@@ -126,6 +126,20 @@ body.dark{
     text-shadow: none;
     }
 
+    
+.botaoLogout {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  width: 12vh;
+  height: 4vh;
+  background: #f78b1f;
+  color: #fff;
+  border: 0px solid #eee;
+  border-radius: 9px;
+  text-shadow: none;
+  margin: 20px;
+  }
+
 .campo-busca{
     height: 100%;
     padding-right: 25%;

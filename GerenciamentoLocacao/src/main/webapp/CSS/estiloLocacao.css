@@ -416,3 +416,13 @@ body.dark .caixaDialogReserva select{
     display: flex;
   }
 
+.calendario{
+  height: 25px;
+  border-radius: 5px;
+  width: 30%;
+  padding: 5px;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: inset 0.5px 1px 7px 0.5px rgba(0, 0, 0, 0.5);
+  margin-left: 165px;
+}
