@@ -17,21 +17,21 @@ public class CreateLocacaoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String quadraNome = req.getParameter("id do html");
+        String quadraNome = req.getParameter("sintetica");
 
-        String dataLocIni = req.getParameter("id data inicio");
+        String dataLocIni = req.getParameter("calendario");
 
-        String dataLocFim = req.getParameter("id data fim");
+        String dataLocFim = req.getParameter("calendario");
 
         String userUsuario = (String) req.getSession().getAttribute("usuarioLogado");
 
-        int idLocavel = Integer.parseInt(req.getParameter("id quadra"));
+        String idLocavel = req.getParameter("1");
 
-        Locacao loc = new Locacao(quadraNome, dataLocIni, dataLocFim, userUsuario, idLocavel);
+        Locacao locacao = new Locacao(quadraNome, dataLocIni, dataLocFim, userUsuario, idLocavel);
 
-        new LocacaoDao().locacao(userUsuario, quadraNome, dataLocIni, dataLocFim, idLocavel);
+        new LocacaoDao().fazerLocacao(locacao);
 
-        req.getRequestDispatcher("locacao.jsp").forward(req,resp); //HELP HERE
+        req.getRequestDispatcher("locacao.jsp").forward(req,resp);
 
     }
 

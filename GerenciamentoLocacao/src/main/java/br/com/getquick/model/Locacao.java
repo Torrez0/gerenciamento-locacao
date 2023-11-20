@@ -7,11 +7,11 @@ public class Locacao {
     private String dataLocacaoIni;
     private String dataLocacaoFim;
 
-    private int idLocavel;
+    private String idLocavel;
 
    // private String horarioLocacao;
 
-    public Locacao(String nomeQuadra, String dataLocacaoIni, String dataLocacaoFim, String usuario, int idLocavel) {
+    public Locacao(String nomeQuadra, String dataLocacaoIni, String dataLocacaoFim, String usuario, String idLocavel) {
         this.usuario = usuario;
         this.nomeQuadra = nomeQuadra;
         this.dataLocacaoIni = dataLocacaoIni;
@@ -32,7 +32,7 @@ public class Locacao {
 
     public String getUsuario() { return usuario; }
 
-    public int getIdLocavel() { return idLocavel; }
+    public String getIdLocavel() { return idLocavel; }
 
     // Não teremos a hora da locação, pq no trigger ele injeta a data automatica na tabela de apoio
     /* public String getHorarioLocacao() {

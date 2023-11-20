@@ -16,23 +16,23 @@
     <div id="overlay"></div>
 
     <dialog id="reservaDialog" class="caixaDialogReserva">
-        <form action="/reserva" method="post">
-            <h6 class="H6" id="sintetica">Quadra Sentética</h6>
+        <form action="/locacao" method="post">
+            <h6 class="H6" name="sintetica" id="sintetica">Quadra Sintética</h6>
 
             <h4>Escolha a data</h4>
-            <input type="date" value="date" class="calendario" />
+            <input type="date" name="calendario" class="calendario" />
 
             <div class="reservaHorario">
                 
                 <h3 class="h3">Escolha a Horario: </h3>
                 
             <select name="horario-sintetica" id="horario-sintetica" class="inputTime">
-                <option value="10">10:00</option>
-                <option value="12">12:00</option>
-                <option value="14">14:00</option>
-                <option value="16">16:00</option>
-                <option value="18">18:00</option>
-                <option value="20">20:00</option>
+                <option name="10">10:00</option>
+                <option name="12">12:00</option>
+                <option name="14">14:00</option>
+                <option name="16">16:00</option>
+                <option name="18">18:00</option>
+                <option name="20">20:00</option>
             </select>
 
             </div>

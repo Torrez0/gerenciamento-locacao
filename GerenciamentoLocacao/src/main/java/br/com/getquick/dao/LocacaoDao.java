@@ -1,35 +1,33 @@
 package br.com.getquick.dao;
 
+import br.com.getquick.model.Locacao;
 import br.com.getquick.model.Usuario;
 
 import java.sql.*;
 
 public class LocacaoDao {
 
-    private static final String INSERT_LOCACAO = "INSERT INTO RESERVA (dataInicio, dataFim, nomeLocavel, usuarioReserva, idLocavel) VALUES (?,?,?,?,?)";
+    private static final String INSERT_LOCACAO = "INSERT INTO RESERVA (DT_INICIO, DT_FIM, NOME_LOCAVEL, USUARIO, ID_LOCAVEL) VALUES (?,?,?,?,?)";
 
-    public boolean locacao(String nomeLocavel, String dataInicio, String dataFim, String usuario, int idLocavel) {
+    public void fazerLocacao(Locacao locacao) {
 
-        try (Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_LOCACAO)) {
+        try (Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa")) {
+            System.out.println("Sucesso na conexão com o banco de dados");
 
-            preparedStatement.setString(1, nomeLocavel);
-            preparedStatement.setString(2, dataInicio);
-            preparedStatement.setString(3, dataFim);
-            preparedStatement.setString(4, usuario);
-            preparedStatement.setInt(5, idLocavel); //Precisa receber o retorno da quadra selecionada no site
+            try (PreparedStatement preparedStatement = connection.prepareStatement(INSERT_LOCACAO)) {
+                preparedStatement.setString(1, locacao.getDataLocacaoIni());
+                preparedStatement.setString(2, locacao.getDataLocacaoFim());
+                preparedStatement.setString(3, "teste");
+                preparedStatement.setString(4, locacao.getUsuario());
+                preparedStatement.setString(5, "1");
+                preparedStatement.executeUpdate();
 
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                if (resultSet.next()) {
-                    int count = resultSet.getInt(1);
-                    return count > 0;
-                }
+                System.out.println("Locacao feita com sucesso");
             }
         } catch (SQLException e) {
-            System.out.println("Erro: " + e.getMessage());
+            System.out.println("Falha na conexão com o banco de dados: " + e.getMessage());
         }
 
-        return false;
     }
 
     public int idLocavel(){
