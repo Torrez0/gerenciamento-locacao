@@ -36,6 +36,10 @@
                     <input type="hidden" name="id" value="${locacao.id}">
                     <button type="submit">Delete</button>
                 </form>
+                <form action="/alterLocacao" method="post">
+                    <input type="hidden" name="id" value="${locacao.id}">
+                    <button type="submit">Alterar</button>
+                </form>
             </td>
         </tr>
     </c:forEach>

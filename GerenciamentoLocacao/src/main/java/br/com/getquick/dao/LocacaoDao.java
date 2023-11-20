@@ -1,7 +1,6 @@
 package br.com.getquick.dao;
 
 import br.com.getquick.model.Locacao;
-import br.com.getquick.model.Usuario;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -133,6 +132,34 @@ public class LocacaoDao {
             return Collections.emptyList();
         }
 
+    }
+
+    public boolean updateLocacao(int idLocacao){
+
+        String UPDATE_LOCACAO = "UPDATE RESERVA SET NOME_LOCAVEL = ?, DT_INICIO = ?, DT_FIM = ? WHERE ID_RESERVA = ?";
+
+        try {
+
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+
+            System.out.println("success in database connection");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_LOCACAO);
+            //Aqui precisa colocar as alterações realizadas\\
+            preparedStatement.setInt(4, idLocacao);
+            preparedStatement.execute();
+
+            System.out.println("success on alter locacao with id: " + idLocacao);
+
+            connection.close();
+
+        } catch (Exception e) {
+
+            System.out.println("fail in database connection");
+
+        }
+
+        return true;
     }
 
 }
