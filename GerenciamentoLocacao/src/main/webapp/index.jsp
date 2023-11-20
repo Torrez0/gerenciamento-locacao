@@ -26,7 +26,6 @@
     <dialog id="loginDialog" class="caixaDialog">
         <form action = "/login" method = "post" >
             <h6>LOGIN</h6>
-            <span>${requestScope.message}</span>
             <label>E-mail: </label>
             <input type="email" name="login-email" id="login-email">
             <label>Senha: </label>
@@ -84,6 +83,7 @@
         </div>
 
         <div class="botoes-nav">
+            <span>${requestScope.message}</span>
             <button class="botaoLogin" id="loginBotao" onclick="abrirLoginDialog()">Login</button>
             <button class="botaoLogin" onclick="abrirCadastroDialog()" >Cadastro</button>    
         </div>

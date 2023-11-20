@@ -17,11 +17,13 @@ public class CreateLocacaoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String quadraNome = req.getParameter("sintetica");
+        String quadraNome = req.getParameter("quadras");
 
-        String dataLocIni = req.getParameter("calendario");
+        String dataLocIni = req.getParameter("calendario") + " " + req.getParameter("horario") + ":00";
 
-        String dataLocFim = req.getParameter("calendario");
+        int horaFimFinal = Integer.parseInt(req.getParameter("horario").replace(":00",""));
+
+        String dataLocFim = req.getParameter("calendario") + " " + (horaFimFinal + 2) + ":00";
 
         String userUsuario = (String) req.getSession().getAttribute("usuarioLogado");
 

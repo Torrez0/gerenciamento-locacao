@@ -86,7 +86,6 @@
 
                 <c:if test="${sessionScope.usuarioLogado != null}">
                     <button onclick="window.location.href='/logout';"class="botaoLogin">Logout</button>
-                    <span>${sessionScope.usuarioLogado}</span>
                 </c:if><!-- <button class="botaoLogin" onclick="abrirCadastroDialog()" >Cadastro</button>-->
             </div>
             

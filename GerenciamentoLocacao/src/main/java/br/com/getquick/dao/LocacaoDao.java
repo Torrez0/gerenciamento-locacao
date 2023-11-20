@@ -7,7 +7,7 @@ import java.sql.*;
 
 public class LocacaoDao {
 
-    private static final String INSERT_LOCACAO = "INSERT INTO RESERVA (DT_INICIO, DT_FIM, NOME_LOCAVEL, USUARIO, ID_LOCAVEL) VALUES (?,?,?,?,?)";
+    private static final String INSERT_LOCACAO = "INSERT INTO RESERVA (DT_INICIO, DT_FIM, NOME_LOCAVEL, USUARIO) VALUES (?,?,?,?)";
 
     public void fazerLocacao(Locacao locacao) {
 
@@ -17,9 +17,8 @@ public class LocacaoDao {
             try (PreparedStatement preparedStatement = connection.prepareStatement(INSERT_LOCACAO)) {
                 preparedStatement.setString(1, locacao.getDataLocacaoIni());
                 preparedStatement.setString(2, locacao.getDataLocacaoFim());
-                preparedStatement.setString(3, "teste");
+                preparedStatement.setString(3, locacao.getNomeQuadra());
                 preparedStatement.setString(4, locacao.getUsuario());
-                preparedStatement.setString(5, "1");
                 preparedStatement.executeUpdate();
 
                 System.out.println("Locacao feita com sucesso");

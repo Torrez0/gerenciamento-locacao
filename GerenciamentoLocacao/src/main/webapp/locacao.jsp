@@ -19,6 +19,14 @@
         <form action="/locacao" method="post">
             <h6 class="H6" name="sintetica" id="sintetica">Quadra Sintética</h6>
 
+
+            <select name="quadras" id="quadras" class="inputTime">
+                <option>sintetico</option>
+                <option>areia</option>
+                <option>salao</option>
+                <option>fiodase</option>
+            </select>
+
             <h4>Escolha a data</h4>
             <input type="date" name="calendario" class="calendario" />
 
@@ -26,13 +34,13 @@
                 
                 <h3 class="h3">Escolha a Horario: </h3>
                 
-            <select name="horario-sintetica" id="horario-sintetica" class="inputTime">
-                <option name="10">10:00</option>
-                <option name="12">12:00</option>
-                <option name="14">14:00</option>
-                <option name="16">16:00</option>
-                <option name="18">18:00</option>
-                <option name="20">20:00</option>
+            <select name="horario" id="horario" class="inputTime">
+                <option>10:00</option>
+                <option>12:00</option>
+                <option>14:00</option>
+                <option>16:00</option>
+                <option>18:00</option>
+                <option>20:00</option>
             </select>
 
             </div>
