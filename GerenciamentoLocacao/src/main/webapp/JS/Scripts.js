@@ -70,6 +70,29 @@ function fecharReserva(){
 
 }
 
+////ALTERAR
+//Funcão para abrir a tela de alterar
+
+function abrirAlterarDialog(){
+
+    var loginDialog = document.getElementById('alterarDialog');
+    var overlay = document.getElementById('overlay');
+
+        loginDialog.showModal();
+        overlay.style.display = 'block';
+
+}
+
+//Função para fechar tela alterar
+function fecharAlterarDialog(){
+
+    var loginDialog = document.getElementById('alterarDialog');
+    var overlay = document.getElementById('overlay');
+
+        loginDialog.close();
+        overlay.style.display = 'none';
+
+}
 
 
 //DARK MODE

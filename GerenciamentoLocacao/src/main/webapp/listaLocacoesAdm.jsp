@@ -13,6 +13,39 @@
     <title>Listagem de Locações</title>
 </head>
 <body>
+
+    <dialog id="alterarDialog" class="caixaDialog">
+        <form action = "/alterLocacao" method = "post" >
+            
+            <select name="quadras" id="quadras" class="inputTime">
+                <option>sintetico</option>
+                <option>areia</option>
+                <option>salao</option>
+                <option>fiodase</option>
+            </select>
+
+            <h4>Escolha a data</h4>
+            <input type="date" name="calendario" class="calendario" />
+
+            <h4>EHora</h4>
+            <select name="horario" id="horario" class="inputTime">
+                <option>10:00</option>
+                <option>12:00</option>
+                <option>14:00</option>
+                <option>16:00</option>
+                <option>18:00</option>
+                <option>20:00</option>
+            </select>
+
+            <button type="button" class="botaoVoltar" onclick="fecharAlterarDialog()">🡨</button>
+            <button type="submit" class="botao">Confirma</button>
+            
+    
+        </form>
+    
+    
+    </dialog>
+
 <h1>Listagem de Locações</h1>
 
 <table border="1">
@@ -38,13 +71,14 @@
                 </form>
                 <form action="/alterLocacao" method="post">
                     <input type="hidden" name="id" value="${locacao.id}">
-                    <button type="submit">Alterar</button>
+                    <button type="submit" id="loginBotao" onclick="abrirAlterarDialog()" >Alterar</button>
                 </form>
             </td>
         </tr>
     </c:forEach>
 
 </table>
+<script src="JS/Scripts.js"></script>
 </body>
 </html>
 
