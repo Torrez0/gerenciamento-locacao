@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="CSS/estiloLocacao.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="CSS/teste.css" media="screen" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -20,11 +19,12 @@
             <h6 class="H6" name="sintetica" id="sintetica">Quadra Sintética</h6>
 
 
-            <select name="quadras" id="quadras" class="inputTime">
-                <option>sintetico</option>
-                <option>areia</option>
-                <option>salao</option>
-                <option>fiodase</option>
+            <select name="quadras" id="quadras" class="inputQuadra">
+                <option>Quadra Sintética</option>
+                <option>Quadra Volei/Basquete</option>
+                <option>Quadra Futsal</option>
+                <option>Quadra Tênis</option>
+            
             </select>
 
             <h4>Escolha a data</h4>
@@ -64,16 +64,18 @@
                
             </div>
             <div class="botoes-locacao">
-                
-                    <button class="botaolocacao"  id="loginBotao" onclick="abrirLocacao()">Minhas Locações</button>
-                <div class="botaoDark">
-                <input type="checkbox" class="checkbox" id="btn" />
-                <label class="label" for="btn">
-                    <i class="fas fa-moon"></i>
-                    <i class="fas fa-sun"></i>
-                    <div class="ball"></div>
-                </label>
-            </div>
+                <div>
+                    <button  class="botao" onclick="window.location.href='./login.jsp';">Inicio</button>
+                    <button class="botaoLocacao" onclick="abrirLocacao()"> Minhas Locações</button>
+                </div>
+                    <div class="botaoDark">
+                        <input type="checkbox" class="checkbox" id="btn" />
+                        <label class="label" for="btn">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
         </div>
           
             
@@ -94,7 +96,7 @@
                     <h3>Segunda a Sabado <br>08h às 22h</h3>
                     <h3>Av.Eng. Eusébio <br>Stevaux, 823</h3>
                     <div class="botao-pai">
-                        <button class="botaoReserve" onclick="abrirReserva()">Reservar</button>
+                        <button class="botao" onclick="abrirReserva()">Reservar</button>
                     </div>
                 </div>
             </div>
@@ -111,7 +113,7 @@
                     <h3>Segunda a Sabado <br>08h às 22h</h3>
                     <h3>Av.Eng. Eusébio <br>Stevaux, 823</h3>
                     <div class="botao-pai">
-                        <button class="botaoReserve" onclick="window.location.href='./reserva.html';">Reservar</button>
+                        <button class="botao" onclick="abrirReserva()">Reservar</button>
                     </div>
                 </div>
             </div>
@@ -128,7 +130,7 @@
                     <h3>Segunda a Sabado <br>08h às 22h</h3>
                     <h3>Av.Eng. Eusébio <br>Stevaux, 823</h3>
                     <div class="botao-pai">
-                        <button class="botaoReserve" onclick="window.location.href='./reserva.html';">Reservar</button>
+                        <button class="botao" onclick="abrirReserva()">Reservar</button>
                     </div>
                 </div>
             </div>
@@ -145,7 +147,7 @@
                     <h3>Segunda a Sabado <br>08h às 22h</h3>
                     <h3>Av.Eng. Eusébio <br>Stevaux, 823</h3>
                     <div class="botao-pai">
-                        <button class="botaoReserve" onclick="window.location.href='./reservas/reserva.html';">Reservar</button>
+                        <button class="botao" onclick="abrirReserva()">Reservar</button>
                     </div>
                 </div>
             </div>
@@ -162,7 +164,7 @@
                     <h3>Segunda a Sabado <br>08h às 22h</h3>
                     <h3>Av.Eng. Eusébio <br>Stevaux, 823</h3>
                     <div class="botao-pai">
-                        <button class="botaoReserve" onclick="window.location.href='./reserva.html';">Reservar</button>
+                        <button class="botao" onclick="abrirReserva()">Reservar</button>
                     </div>
                 </div>
             </div>
@@ -179,7 +181,7 @@
                     <h3>Segunda a Sabado <br>08h às 22h</h3>
                     <h3>Av.Eng. Eusébio <br>Stevaux, 823</h3>
                     <div class="botao-pai">
-                        <button class="botaoReserve" onclick="window.location.href='./reserva.html';">Reservar</button>
+                        <button class="botao" onclick="abrirReserva()">Reservar</button>
                     </div>
                 </div>
             </div>

@@ -10,9 +10,30 @@
 
 <html>
 <head>
-    <title>Listagem de Locações</title>
+    <link rel="stylesheet" type="text/css" href="CSS/estiloListarLocacao.css" media="screen" />
+
 </head>
 <body>
+
+    <header>
+        <div class="header">
+            <div class="logo-site">
+                <div class="container">
+                    <img class="logoQuick" src="./img/logoGetQuick.png">
+                    <!-- Modo Dark -->
+                </div>
+                
+            </div>
+            <div class="botoes-locacao">
+                <button class="button-inicio " onclick="window.location.href='./login.jsp';">Inicio</button>
+            </div>
+        </div>
+          
+            
+        </div>
+    </header>
+
+
 <h1>Listagem de Locações</h1>
 
 <table border="1">

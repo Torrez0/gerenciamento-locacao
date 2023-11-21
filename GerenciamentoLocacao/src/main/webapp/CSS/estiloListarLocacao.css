@@ -1,0 +1,198 @@
+/*AZUL HOME - #005594  */
+/*AZUL CLARO HOME - #2966F4  */
+/* AZUL PARTE DE CIMA NAV - #115A90 */
+/*CINZA LETRA - #78849E  */
+/*CINZA BACKGROUND - #E4E8F0  */
+/*LARANJA - #F78B1F  */
+/*LARANJA CLARO - #F6BF86  */
+/*AZUL CLARISSIMO - #29B7F4  */
+/* DARK MODE CORES */
+/* AZUL ESCURO CONTAINER - #121929  */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box; /*leva em conta o tamanho da borda e padding, não ultrapassando
+    a proporção criada */
+    transition: background 0.5s linear, color 0.5s linear;
+
+}
+body{
+  
+  font-family: 'Montserrat', sans-serif;
+  background-color: #E4E8F0;
+}
+
+.logoQuick{
+    height:70px;
+    padding-right: 260px;
+    margin-top:0px ;
+}
+
+.logo-site{
+    height: 100px;
+    width: 70%;
+}
+
+.header {
+    background-color: #115A90;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  body.dark .header{
+    background-color: #18181B;
+    transition: background 0.5s linear, color 0.5s linear;
+    box-shadow: none;
+  }
+
+  .container {
+    height:100%;
+    display: flex;
+    padding: 25px;
+    margin-left: 40px;
+    border-radius: 0px 0px 20px 20px;
+    position: relative;
+    z-index: 1;
+    justify-content: end;
+  }
+  .botoes-locacao{
+    margin-top: 30px;
+    margin-right: 50px;
+  }
+
+  .button-inicio {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5vh;
+    width: 10vh;
+    height: 4vh;
+    background: #f78b1f;
+    color: #fff;
+    border: 0px solid #eee;
+    border-radius: 10px;
+    text-shadow: none;
+    margin-top: 10px;
+    margin-right: 2.5vh;
+
+    }
+
+
+
+  .button-inicio :hover{
+
+    background: #f1b477de;
+    color: #fff;
+    border: 0px solid #eee;
+    border-radius: 9px;
+    text-shadow: none;
+    
+    }
+  
+  
+  table, th {
+    
+    height: 20%;
+    background-color: #115A90;
+    border: 1px solid black;
+ }
+
+
+ table, tr{
+    width: 60%;
+    background-color: #ffffff;
+ }
+
+ table, td{
+  
+  border: 1px solid #78849E;
+  text-align: center;
+  height: 40px;
+ }
+
+ table{
+  margin-left: 400px;
+ }
+
+ button{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  width: 70px;
+  height: 30px;
+  background-color: #f39c12;
+  border-radius: 10px;
+  margin: 5px;
+ }
+ button:hover{
+
+  background-color: #f1b477de;;
+ }
+
+ h1{
+  color:#78849E ;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-left: 770px;
+ }
+
+
+
+   /* DARK MODE */
+
+ .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .botaoDark{
+    padding-left: 40px
+  }
+  
+  .label {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1);
+  
+  }
+  
+  
+  .label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+  }
+  
+  .checkbox:checked + .label .ball {
+    transform: translateX(24px);
+  }
+  
+  .fa-moon {
+    color: #f1c40f;
+  }
+  
+  .fa-sun {
+    color: #f39c12;
+  }
+
+  

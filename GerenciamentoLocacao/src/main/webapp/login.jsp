@@ -82,7 +82,7 @@
             </div>
 
             <div class="botoes-nav">
-                <button class="botaoLogin" id="loginBotao" onclick="abrirLoginDialog()">Minhas Locações</button>
+                <button class="botaoLogin" id="loginBotao" onclick="window.location.href='listar-locacao';">Minhas Locações</button>
 
                 <c:if test="${sessionScope.usuarioLogado != null}">
                     <button onclick="window.location.href='/logout';"class="botaoLogin">Logout</button>
