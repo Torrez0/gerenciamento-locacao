@@ -14,7 +14,7 @@ public class DeleteLocacao extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String idLocacao = req.getParameter("id");
+        String idLocacao = req.getParameter("idLocacao");
 
         new LocacaoDao().deleteLocacao(idLocacao);
 

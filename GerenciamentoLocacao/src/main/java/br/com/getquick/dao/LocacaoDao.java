@@ -75,30 +75,22 @@ public class LocacaoDao {
 
 
     public void deleteLocacao(String idLocacao) {
+        String SQL = "DELETE FROM RESERVA WHERE ID_RESERVA = ?";
 
-        String SQL = "DELETE RESERVA WHERE ID = ?";
+        try (Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa")) {
+            System.out.println("Success in database connection");
 
-        try {
+            try (PreparedStatement preparedStatement = connection.prepareStatement(SQL)) {
+                preparedStatement.setString(1, idLocacao);
+                preparedStatement.executeUpdate();
 
-            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
-            System.out.println("success in database connection");
-
-            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-            preparedStatement.setString(1, idLocacao);
-            preparedStatement.execute();
-
-            System.out.println("success on delete car with id: " + idLocacao);
-
-            connection.close();
-
-        } catch (Exception e) {
-
-            System.out.println("fail in database connection");
-
+                System.out.println("Success on delete locacao with id: " + idLocacao);
+            }
+        } catch (SQLException e) {
+            System.out.println("Fail in database connection: " + e.getMessage());
         }
-
     }
+
 
     public List<Locacao> listarLocacoesRelatorio() {
         String listarLocacao = "SELECT ID_RESERVA,  NOME_LOCAVEL, FORMATDATETIME(DT_INICIO, 'dd/MM/YYYY HH:mm') AS \"DATA INÍCIO\", FORMATDATETIME(DT_FIM, 'dd/MM/YYYY HH:mm') AS \"DATA FIM\", USUARIO FROM RESERVA";
@@ -134,7 +126,7 @@ public class LocacaoDao {
 
     }
 
-    public boolean updateLocacao(int idLocacao){
+    public boolean updateLocacao(String idLocacao){
 
         String UPDATE_LOCACAO = "UPDATE RESERVA SET NOME_LOCAVEL = ?, DT_INICIO = ?, DT_FIM = ? WHERE ID_RESERVA = ?";
 
@@ -146,7 +138,7 @@ public class LocacaoDao {
 
             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_LOCACAO);
             //Aqui precisa colocar as alterações realizadas\\
-            preparedStatement.setInt(4, idLocacao);
+            preparedStatement.setString(4, idLocacao);
             preparedStatement.execute();
 
             System.out.println("success on alter locacao with id: " + idLocacao);

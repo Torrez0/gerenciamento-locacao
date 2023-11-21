@@ -65,12 +65,12 @@
             <td>${locacao.dataLocacaoFim}</td>
             <td>${locacao.usuario}</td>
             <td>
-                <form action="/delete-locacao" method="post">
-                    <input type="hidden" name="id" value="${locacao.id}">
+                <form action="/delete-locacaoAdmin" method="post">
+                    <input type="hidden" name="idLocacao" value="${locacao.id}">
                     <button type="submit">Delete</button>
                 </form>
-                <form action="/alterLocacao" method="post">
-                    <input type="hidden" name="id" value="${locacao.id}">
+                <form action="/alterLocacaoAdmin" method="post">
+                    <input type="hidden" name="idLocacao" value="${locacao.id}">
                     <button type="submit" id="loginBotao" onclick="abrirAlterarDialog()" >Alterar</button>
                 </form>
             </td>

@@ -1,19 +1,16 @@
 package br.com.getquick.servlet;
 
 import br.com.getquick.dao.LocacaoDao;
-import br.com.getquick.model.Locacao;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
-@WebServlet("/alterLocacaoAdmin")
-public class UpdateLocacao extends HttpServlet {
+@WebServlet("/alterLocacao")
+public class UpdateLocacaoServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -21,7 +18,7 @@ public class UpdateLocacao extends HttpServlet {
 
         new LocacaoDao().updateLocacao(idLocacao);
 
-        resp.sendRedirect("/locacaoAdmin");
+        resp.sendRedirect("/listar-locacao");
     }
 
 }
