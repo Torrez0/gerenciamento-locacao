@@ -53,7 +53,7 @@
                 <td>${locacao.dataLocacaoFim}</td>
                 <td>${locacao.usuario}</td>
                 <td>
-                    <form action="/delete-locacaoAdmin" method="post">
+                    <form action="/delete-locacao" method="post">
                         <input type="hidden" name="idLocacao" value="${locacao.id}">
                         <button type="submit">Delete</button>
                     </form>
@@ -62,7 +62,7 @@
     
     
                 <dialog id="alterarDialog" class="caixaDialogAlterar">
-                    <form action = "/alterLocacaoAdmin" method = "post" >
+                    <form action = "/alterLocacao" method = "post" >
                         <h4>Escolha Quadra</h4>
                         <select name="quadras" id="quadras" class="inputQuadra">
                             <option>Quadra Sintética</option>
