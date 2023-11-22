@@ -7,12 +7,17 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:if test="${sessionScope.usuarioLogado == 'admin@admin.com'}">
+
 
 
 <html>
+<c:if test="${sessionScope.usuarioLogado != 'admin@admin.com'}">
+<h1>Acesso negado. Conta não é Administradora!</h1>
+</c:if>
+
 <head>
     <link rel="stylesheet" type="text/css" href="CSS/estiloListarLocacao.css" media="screen" />
+<c:if test="${sessionScope.usuarioLogado == 'admin@admin.com'}">
 </head>
 <body>
 
