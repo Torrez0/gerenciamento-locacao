@@ -3,11 +3,13 @@ package br.com.getquick.dao;
 import br.com.getquick.model.Locacao;
 
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class LocacaoDao {
+    private static final String UPDATE_LOCACAO = "UPDATE RESERVA SET NOME_LOCAVEL=?, DT_INICIO=?, DT_FIM=? WHERE ID_RESERVA=?";
 
     private static final String INSERT_LOCACAO = "INSERT INTO RESERVA (DT_INICIO, DT_FIM, NOME_LOCAVEL, USUARIO) VALUES (?,?,?,?)";
 
@@ -126,27 +128,31 @@ public class LocacaoDao {
 
     }
 
-    public void updateLocacao(Locacao locacaoAlterada){
-
-        String UPDATE_LOCACAO = "UPDATE RESERVA SET NOME_LOCAVEL = ?, DT_INICIO = ?, DT_FIM = ? WHERE ID_RESERVA = ?";
-
+    public void atualizarLocacao(Locacao locacao) {
         try (Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa")) {
             System.out.println("Sucesso na conexão com o banco de dados");
 
             try (PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_LOCACAO)) {
-                preparedStatement.setString(1, locacaoAlterada.getNomeQuadra());
-                preparedStatement.setString(2, locacaoAlterada.getDataLocacaoIni());
-                preparedStatement.setString(3, locacaoAlterada.getDataLocacaoFim());
-                preparedStatement.setString(4, locacaoAlterada.getId());
+
+                System.out.println("NomeQuadra: " + locacao.getNomeQuadra());
+                System.out.println("DataLocacaoIni: " + locacao.getDataLocacaoIni());
+                System.out.println("DataLocacaoFim: " + locacao.getDataLocacaoFim());
+                System.out.println("ID: " + locacao.getId());
+
+                preparedStatement.setString(1, locacao.getNomeQuadra());
+                preparedStatement.setString(2, locacao.getDataLocacaoIni());
+                preparedStatement.setString(3, locacao.getDataLocacaoFim());
+                preparedStatement.setString(4, locacao.getId());
                 preparedStatement.executeUpdate();
 
-                System.out.println("Alteracao feita");
+                System.out.println("Locacao atualizada com sucesso");
             }
         } catch (SQLException e) {
             System.out.println("Falha na conexão com o banco de dados: " + e.getMessage());
         }
-
     }
+
+
 
 }
 
