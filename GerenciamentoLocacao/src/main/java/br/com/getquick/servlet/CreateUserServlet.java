@@ -27,6 +27,7 @@ public class CreateUserServlet extends HttpServlet {
 
         new UsuarioDao().criarUsuario(usuario);
 
+        httpServletRequest.setAttribute("message", "Cadastro realizado com sucesso!");
         httpServletRequest.getRequestDispatcher("index.jsp").forward(httpServletRequest,httpServletResponse);
 
     }
@@ -34,6 +35,7 @@ public class CreateUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        req.setAttribute("message", "Cadastro realizado com sucesso!");
         req.getRequestDispatcher("index.jsp").forward(req, resp);
 
 //        resp.sendRedirect("index.jsp");
