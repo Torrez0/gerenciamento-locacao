@@ -7,6 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:if test="${sessionScope.usuarioLogado == 'admin@admin.com'}">
+
 
 <html>
 <head>
@@ -53,6 +55,7 @@
 
                     <h4>Escolha a data</h4>
                     <input type="date" name="calendario" class="calendario" />
+                    <input type="date" name="calendario" class="calendario" />
 
                     <h4>EHora</h4>
                     <select name="horario" id="horario" class="inputTime">
@@ -81,3 +84,4 @@
 </body>
 </html>
 
+</c:if>

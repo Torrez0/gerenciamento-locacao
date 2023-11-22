@@ -57,11 +57,42 @@
                     <input type="hidden" name="idLocacao" value="${locacao.id}">
                     <button type="submit">Delete</button>
                 </form>
-                <form action="/alterLocacao" method="post">
-                    <input type="hidden" name="idLocacao" value="${locacao.id}">
-                    <button type="submit">Alterar</button>
-                </form>
-            </td>
+
+                 <button type="submit" id="loginBotao" onclick="abrirAlterarDialog()">Alterar</button>
+
+           </td>
+        <dialog id="alterarDialog" class="caixaDialog">
+                        <form action = "/alterLocacao" method = "post" >
+
+                            <select name="quadras" id="quadras" class="inputTime">
+                                <option>sintetico</option>
+                                <option>areia</option>
+                                <option>salao</option>
+                                <option>fiodase</option>
+                            </select>
+
+                            <h4>Escolha a data</h4>
+                            <input type="date" name="calendario" class="calendario" />
+
+                            <h4>EHora</h4>
+                            <select name="horario" id="horario" class="inputTime">
+                                <option>10:00</option>
+                                <option>12:00</option>
+                                <option>14:00</option>
+                                <option>16:00</option>
+                                <option>18:00</option>
+                                <option>20:00</option>
+                            </select>
+
+                            <form action="/alterLocacao" method="post">
+                                <input type="hidden" name="idLocacao" value="${locacao.id}">
+                                <button type="submit" >Alterar</button>
+                            </form>
+
+                            <button type="button" class="botaoVoltar" onclick="fecharAlterarDialog()">🡨</button>
+                            <button type="submit" class="botao">Confirma</button>
+                        </form>
+                    </dialog>
         </tr>
     </c:forEach>
 

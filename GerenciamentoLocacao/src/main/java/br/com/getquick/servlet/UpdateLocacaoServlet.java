@@ -20,7 +20,7 @@ public class UpdateLocacaoServlet extends HttpServlet {
         int horaFimFinal = Integer.parseInt(req.getParameter("horario").replace(":00:00", ""));
         String dataLocFim = req.getParameter("calendario") + " " + (horaFimFinal + 2) + ":00";
 
-        Locacao locacao = new Locacao(idLocacao, quadraNome, dataLocIni, dataLocFim, null);
+        Locacao locacao = new Locacao(idLocacao, quadraNome, dataLocIni, dataLocFim);
         new LocacaoDao().atualizarLocacao(locacao);
 
         resp.sendRedirect("/listar-locacao");
