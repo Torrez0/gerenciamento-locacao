@@ -111,26 +111,15 @@
                 </label>
             </div>
 
-            <!-- BUSCAR -->
-            <div class="campo-busca">
-                <div>
-                    <select name="unidades-senac" class="txtBusca" id="unidades-senac">
-                        <option value="senac">Senac Santo Amaro</option>
-                        <option value="aclimacao">Senac Aclimação</option>
-                        <option value="itaquera">Senac Itaquera</option>
-                    </select>
-                </div>
-                <div >
-                    <select name="espaco-senac" class="txtBusca" id="espaco-senac">
-                        <option value="Sintetica">Sintetica</option>
-                        <option value="volei">Volei</option>
-                        <option value="Basquete">Basquete</option>
-                    </select>
-                </div>
-                <div>
-                    <button class="botaoBuscar">Buscar</button>
-                </div>
-            </div>
+               <!-- BUSCAR -->
+        <div class="campo-busca">
+            
+            <div class="sobre-texto">Faça já sua locação</div>
+        
+        <div>
+            <button class="botaoBuscar" onclick="window.location.href='/locacao.jsp';">Locação</button>
+        </div>
+    </div>
         </div>
 
         <!-- Conheça nosso site -->

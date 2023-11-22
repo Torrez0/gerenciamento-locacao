@@ -46,53 +46,56 @@
         </tr>
     
         <c:forEach var="locacao" items="${locacoes}">
-            <tr>
-                <td>${locacao.id}</td>
-                <td>${locacao.nomeQuadra}</td>
-                <td>${locacao.dataLocacaoIni}</td>
-                <td>${locacao.dataLocacaoFim}</td>
-                <td>${locacao.usuario}</td>
-                <td>
-                    <form action="/delete-locacao" method="post">
+        <tr>
+            <td>${locacao.id}</td>
+            <td>${locacao.nomeQuadra}</td>
+            <td>${locacao.dataLocacaoIni}</td>
+            <td>${locacao.dataLocacaoFim}</td>
+            <td>${locacao.usuario}</td>
+            <td>
+                <form action="/delete-locacao" method="post">
+                    <input type="hidden" name="idLocacao" value="${locacao.id}">
+                    <button type="submit">Delete</button>
+                </form>
+                <button type="submit" id="loginBotao" onclick="abrirAlterarDialog()" >Alterar</button>
+            </td>
+
+
+            <dialog id="alterarDialog" class="caixaDialogAlterar">
+                <form action = "/alterLocacao" method = "post" >
+                    <h4>Escolha Quadra</h4>
+                    <select name="quadras" id="quadras" class="inputQuadra">
+                        <option>Quadra Sintética</option>
+                        <option>Quadra Volei/Basquete</option>
+                        <option>Quadra Futsal</option>
+                        <option>Quadra Tênis</option>
+                    </select>
+
+                    <h4>Escolha a data</h4>
+                    
+                    <input type="date" name="calendario" class="calendario" />
+
+                    <h3 class="h3">Escolha a Horario: </h3>
+
+                    <select name="horario" id="horario" class="inputTime">
+                        <option>10:00</option>
+                        <option>12:00</option>
+                        <option>14:00</option>
+                        <option>16:00</option>
+                        <option>18:00</option>
+                        <option>20:00</option>
+                    </select>
+                   
+                   
                         <input type="hidden" name="idLocacao" value="${locacao.id}">
-                        <button type="submit">Delete</button>
-                    </form>
-                    <button type="submit" id="loginBotao" onclick="abrirAlterarDialog()" >Alterar</button>
-                </td>
-                <dialog id="alterarDialog" class="caixaDialog">
-                    <form action = "/alterLocacao" method = "post" >
-    
-                        <select name="quadras" id="quadras" class="inputTime">
-                            <option>sintetico</option>
-                            <option>areia</option>
-                            <option>salao</option>
-                            <option>fiodase</option>
-                        </select>
-    
-                        <h4>Escolha a data</h4>
-                        <input type="date" name="calendario" class="calendario" />
-    
-                        <h4>EHora</h4>
-                        <select name="horario" id="horario" class="inputTime">
-                            <option>10:00</option>
-                            <option>12:00</option>
-                            <option>14:00</option>
-                            <option>16:00</option>
-                            <option>18:00</option>
-                            <option>20:00</option>
-                        </select>
-    
-                        <form action="/alterLocacao" method="post">
-                            <input type="hidden" name="idLocacao" value="${locacao.id}">
-                            <button type="submit" >Alterar</button>
-                        </form>
-    
                         <button type="button" class="botaoVoltar" onclick="fecharAlterarDialog()">🡨</button>
-                        <button type="submit" class="botao">Confirma</button>
-                    </form>
-                </dialog>
-            </tr>
-        </c:forEach>
+                        <button type="submit" class="botao">Alterar</button>
+                    
+                </form>
+            </dialog>
+
+        </tr>
+    </c:forEach>
     
     </table>
     <script src="JS/Scripts.js"></script>

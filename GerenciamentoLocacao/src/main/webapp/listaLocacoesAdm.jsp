@@ -74,7 +74,6 @@
 
                     <h4>Escolha a data</h4>
                     <input type="date" name="calendario" class="calendario" />
-                    <input type="date" name="calendario" class="calendario" />
 
                     <h3 class="h3">Escolha a Horario: </h3>
 
