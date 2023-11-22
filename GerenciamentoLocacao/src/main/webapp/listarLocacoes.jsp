@@ -34,38 +34,68 @@
     </header>
 
 
-<h1>Listagem de Locações</h1>
+    <h1>Listagem de Locações</h1>
 
-<table border="1">
-    <tr>
-        <th>Id da Locacao</th>
-        <th>Nome do Locável</th>
-        <th>Data de Início</th>
-        <th>Data de Fim</th>
-        <th>Usuário</th>
-    </tr>
-
-    <c:forEach var="locacao" items="${locacoes}">
+    <table border="1">
         <tr>
-            <td>${locacao.id}</td>
-            <td>${locacao.nomeQuadra}</td>
-            <td>${locacao.dataLocacaoIni}</td>
-            <td>${locacao.dataLocacaoFim}</td>
-            <td>${locacao.usuario}</td>
-            <td>
-                <form action="/delete-locacao" method="post">
-                    <input type="hidden" name="idLocacao" value="${locacao.id}">
-                    <button type="submit">Delete</button>
-                </form>
-                <form action="/alterLocacao" method="post">
-                    <input type="hidden" name="idLocacao" value="${locacao.id}">
-                    <button type="submit">Alterar</button>
-                </form>
-            </td>
+            <th>Id da Locacao</th>
+            <th>Nome do Locável</th>
+            <th>Data de Início</th>
+            <th>Data de Fim</th>
+            <th>Usuário</th>
         </tr>
-    </c:forEach>
-
-</table>
-</body>
+    
+        <c:forEach var="locacao" items="${locacoes}">
+            <tr>
+                <td>${locacao.id}</td>
+                <td>${locacao.nomeQuadra}</td>
+                <td>${locacao.dataLocacaoIni}</td>
+                <td>${locacao.dataLocacaoFim}</td>
+                <td>${locacao.usuario}</td>
+                <td>
+                    <form action="/delete-locacaoAdmin" method="post">
+                        <input type="hidden" name="idLocacao" value="${locacao.id}">
+                        <button type="submit">Delete</button>
+                    </form>
+                    <button type="submit" id="loginBotao" onclick="abrirAlterarDialog()" >Alterar</button>
+                </td>
+                <dialog id="alterarDialog" class="caixaDialog">
+                    <form action = "/alterLocacaoAdmin" method = "post" >
+    
+                        <select name="quadras" id="quadras" class="inputTime">
+                            <option>sintetico</option>
+                            <option>areia</option>
+                            <option>salao</option>
+                            <option>fiodase</option>
+                        </select>
+    
+                        <h4>Escolha a data</h4>
+                        <input type="date" name="calendario" class="calendario" />
+    
+                        <h4>EHora</h4>
+                        <select name="horario" id="horario" class="inputTime">
+                            <option>10:00</option>
+                            <option>12:00</option>
+                            <option>14:00</option>
+                            <option>16:00</option>
+                            <option>18:00</option>
+                            <option>20:00</option>
+                        </select>
+    
+                        <form action="/alterLocacaoAdmin" method="post">
+                            <input type="hidden" name="idLocacao" value="${locacao.id}">
+                            <button type="submit" >Alterar</button>
+                        </form>
+    
+                        <button type="button" class="botaoVoltar" onclick="fecharAlterarDialog()">🡨</button>
+                        <button type="submit" class="botao">Confirma</button>
+                    </form>
+                </dialog>
+            </tr>
+        </c:forEach>
+    
+    </table>
+    <script src="JS/Scripts.js"></script>
+    </body>
 </html>
 

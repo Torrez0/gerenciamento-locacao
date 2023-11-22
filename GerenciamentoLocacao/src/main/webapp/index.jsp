@@ -120,13 +120,14 @@
               <!-- BUSCAR -->
               <div class="campo-busca">
             
-                <div class="sobre-texto">Faça já sua locação</div>
+                <h2>Faça já sua locação</h2>
             
             <div>
                 <button class="botaoBuscar" onclick="window.location.href='/locacao.jsp';">Locação</button>
             </div>
         </div>
     </div>
+
      <!-- Conheça nosso site -->
 
      <div class="container-site">
