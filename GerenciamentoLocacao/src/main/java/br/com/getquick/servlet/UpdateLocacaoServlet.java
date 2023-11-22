@@ -17,13 +17,13 @@ public class UpdateLocacaoServlet extends HttpServlet {
         String idLocacao = req.getParameter("idLocacao");
         String quadraNome = req.getParameter("quadras");
         String dataLocIni = req.getParameter("calendario") + " " + req.getParameter("horario") + ":00";
-        int horaFimFinal = Integer.parseInt(req.getParameter("horario").replace(":00", ""));
+        int horaFimFinal = Integer.parseInt(req.getParameter("horario").replace(":00:00", ""));
         String dataLocFim = req.getParameter("calendario") + " " + (horaFimFinal + 2) + ":00";
 
         Locacao locacao = new Locacao(idLocacao, quadraNome, dataLocIni, dataLocFim, null);
         new LocacaoDao().atualizarLocacao(locacao);
 
-        req.getRequestDispatcher("locacao.jsp").forward(req, resp);
+        resp.sendRedirect("/listar-locacao");
     }
 
 }
