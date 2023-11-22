@@ -212,11 +212,25 @@
  
             </div>
         </div>
-    
-        <!-- Mapa do SENAC (Saber aonde colocar) -->
-        <!--<div class="mapa-senac">
+
+    <div class="mapa-senac">
+        <div>
+            <!-- Código do mapa aqui -->
             <iframe src="https://www.google.com/maps/d/embed?mid=1REeSYLXKotZmndQNu4CbqghnbqPMc74&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
-        </div> -->
+        </div>
+        <div class="mapa-teste">
+        <div class="texto-lateral">
+            <p><strong> Visualize o mapa do Senac personalizado, com os nomes declarados pelos alunos!  </strong></p>
+            <br>
+            <p>Abaixo, você também pode acessar o site oficial do Senac e conhecer por meio de um tour virtual!</p>
+            <br>
+            <div class="botao-container">
+                <button onclick="window.open('https://www.sp.senac.br/visitavirtual/Santo_Amaro/#5482612p&37.95h&87.93t', '_blank')" class="botao-redirecionar">Fazer Tour Virtual</button>
+            </div>
+            <br>
+        </div>
+        </div>
+    </div>
 
 
  

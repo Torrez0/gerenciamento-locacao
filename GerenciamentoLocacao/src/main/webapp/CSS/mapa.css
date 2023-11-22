@@ -1,5 +1,49 @@
+/* Estilo para o contêiner do texto ao lado do mapa  */
+.texto-lateral {
+    font-size: 50px;
+    color: #78849E;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-left: 50px;
+}
+
+/* Adiciona elementos pra modificar o texto */
+.texto-lateral p {
+    font-size: 35px;
+    color: #78849E;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Ajustes para o mapa */
 .mapa-senac {
-    width: 100%; /* Ocupa 100% da largura disponível no espaço do mapa */
-    margin-left: 50%;
-    margin-top: 200px; /* Ajusta a margem superior de acordo com a proporção necessário do mapa */
+    display: flex;
+    align-items: center; /* Centraliza os filhos verticalmente */
+    justify-content: flex-start; /* Alinha os filhos à esquerda */
+    margin-top: 550px;
+    background: #E4E8F0;
+}
+
+/* Estilo para o mapa dentro do contêiner flexível */
+.mapa-senac iframe {
+    flex: 3;
+    min-width: 800px;
+    height: 800px;
+    max-width: 1600px;
+    margin-left: 50px; /* Ajuste a margem à esquerda conforme necessário */
+    background: #E4E8F0;
+}
+
+/* Estilo para o botão de redirecionamento para tour */
+.botao-redirecionar {
+    font-size: 20px;
+    font-weight: 1000;
+    width: 25vh;
+    height: 7vh;
+    background: #f78b1f;
+    color: #fff;
+    border: 0px solid #eee;
+    border-radius: 9px;
+    text-shadow: none;
+    margin: 20px;
+
 }
