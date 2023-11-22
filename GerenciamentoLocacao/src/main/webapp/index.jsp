@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/sobre.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="CSS/site.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="CSS/select.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="CSS/caixaAlerta.css" media="screen" />
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,6 +23,13 @@
     <!-- Caixa Dialog Login -->
 
     <main class="login_form">
+        <div class="caixaAlertaPai" id="fecharCaixaAlerta">
+            <div class="caixaAlerta">
+                <%= request.getAttribute("message") %>
+                <button onclick="fecharCaixaAlerta()">✖</button>
+            </div>
+        </div>
+
         <div id="overlay"></div>
     <dialog id="loginDialog" class="caixaDialog">
         <form action = "/login" method = "post" >
@@ -74,6 +82,8 @@
         </form>
     </dialog>
 
+
+
 <header>
     
    
@@ -83,7 +93,7 @@
         </div>
 
         <div class="botoes-nav">
-            <span>${requestScope.message}</span>
+
             <button class="botaoLogin" id="loginBotao" onclick="abrirLoginDialog()">Login</button>
             <button class="botaoLogin" onclick="abrirCadastroDialog()" >Cadastro</button>    
         </div>
@@ -199,7 +209,11 @@
 
  
 </header>
+
+
     </main>
+
+
 
 <script src="JS/Scripts.js"></script>
 <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
