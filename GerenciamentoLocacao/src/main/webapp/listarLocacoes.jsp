@@ -59,20 +59,23 @@
                     </form>
                     <button type="submit" id="loginBotao" onclick="abrirAlterarDialog()" >Alterar</button>
                 </td>
-                <dialog id="alterarDialog" class="caixaDialog">
-                    <form action = "/alterLocacaoAdmin" method = "post" >
     
-                        <select name="quadras" id="quadras" class="inputTime">
-                            <option>sintetico</option>
-                            <option>areia</option>
-                            <option>salao</option>
-                            <option>fiodase</option>
+    
+                <dialog id="alterarDialog" class="caixaDialogAlterar">
+                    <form action = "/alterLocacaoAdmin" method = "post" >
+                        <h4>Escolha Quadra</h4>
+                        <select name="quadras" id="quadras" class="inputQuadra">
+                            <option>Quadra Sintética</option>
+                            <option>Quadra Volei/Basquete</option>
+                            <option>Quadra Futsal</option>
+                            <option>Quadra Tênis</option>
                         </select>
     
                         <h4>Escolha a data</h4>
                         <input type="date" name="calendario" class="calendario" />
     
-                        <h4>EHora</h4>
+                        <h3 class="h3">Escolha a Horario: </h3>
+    
                         <select name="horario" id="horario" class="inputTime">
                             <option>10:00</option>
                             <option>12:00</option>
@@ -81,16 +84,15 @@
                             <option>18:00</option>
                             <option>20:00</option>
                         </select>
-    
-                        <form action="/alterLocacaoAdmin" method="post">
+                       
+                       
                             <input type="hidden" name="idLocacao" value="${locacao.id}">
-                            <button type="submit" >Alterar</button>
-                        </form>
-    
-                        <button type="button" class="botaoVoltar" onclick="fecharAlterarDialog()">🡨</button>
-                        <button type="submit" class="botao">Confirma</button>
+                            <button type="button" class="botaoVoltar" onclick="fecharAlterarDialog()">🡨</button>
+                            <button type="submit" class="botao">Alterar</button>
+                        
                     </form>
                 </dialog>
+    
             </tr>
         </c:forEach>
     
