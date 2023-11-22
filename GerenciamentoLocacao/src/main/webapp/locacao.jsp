@@ -34,7 +34,7 @@
                 
                 <h3 class="h3">Escolha a Horario: </h3>
                 
-            <select name="horario" id="horario" class="inputTime">
+            <select name="horario" id="horario" >
                 <option>10:00</option>
                 <option>12:00</option>
                 <option>14:00</option>
@@ -66,7 +66,7 @@
             <div class="botoes-locacao">
                 <div>
                     <button  class="botao" onclick="window.location.href='./login.jsp';">Inicio</button>
-                    <button class="botaoLocacao" onclick="abrirLocacao()"> Minhas Locações</button>
+                    <button class="botaoLocacao" onclick="window.location.href='listar-locacao';"> Minhas Locações</button>
                 </div>
                     <div class="botaoDark">
                         <input type="checkbox" class="checkbox" id="btn" />
