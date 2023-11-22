@@ -15,7 +15,7 @@
 <body>
 
     <dialog id="alterarDialog" class="caixaDialog">
-        <form action = "/alterLocacao" method = "post" >
+        <form action = "/alterLocacaoAdmin" method = "post" >
             
             <select name="quadras" id="quadras" class="inputTime">
                 <option>sintetico</option>
@@ -36,6 +36,11 @@
                 <option>18:00</option>
                 <option>20:00</option>
             </select>
+
+            <form action="/alterLocacaoAdmin" method="post">
+                <input type="hidden" name="idLocacao" value="${locacao.id}">
+                <button type="submit" >Alterar</button>
+            </form>
 
             <button type="button" class="botaoVoltar" onclick="fecharAlterarDialog()">🡨</button>
             <button type="submit" class="botao">Confirma</button>
@@ -69,10 +74,8 @@
                     <input type="hidden" name="idLocacao" value="${locacao.id}">
                     <button type="submit">Delete</button>
                 </form>
-                <form action="/alterLocacaoAdmin" method="post">
-                    <input type="hidden" name="idLocacao" value="${locacao.id}">
-                    <button type="submit" id="loginBotao" onclick="abrirAlterarDialog()" >Alterar</button>
-                </form>
+                <button type="submit" id="loginBotao" onclick="abrirAlterarDialog()" >Alterar</button>
+
             </td>
         </tr>
     </c:forEach>

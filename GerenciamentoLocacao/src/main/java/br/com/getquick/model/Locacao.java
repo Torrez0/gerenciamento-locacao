@@ -30,6 +30,13 @@ public class Locacao {
         // this.horarioLocacao = horarioLocacao;
     }
 
+    public Locacao(String id, String nomeQuadra, String dataLocacaoIni, String dataLocacaoFim) {
+        this.id = id;
+        this.nomeQuadra = nomeQuadra;
+        this.dataLocacaoIni = dataLocacaoIni;
+        this.dataLocacaoFim = dataLocacaoFim;
+    }
+
 
     public String getId() {
         return id;
