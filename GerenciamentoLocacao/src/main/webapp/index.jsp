@@ -20,9 +20,11 @@
 </head>
 <body >
 
-    <!-- Caixa Dialog Login -->
+    
 
     <main class="login_form">
+
+        <!-- Caixa ALERTA -->
         <div class="caixaAlertaPai" id="fecharCaixaAlerta">
             <div class="caixaAlerta">
                 <%= request.getAttribute("message") %>
@@ -30,6 +32,7 @@
             </div>
         </div>
 
+        <!-- Caixa Dialog Login -->
         <div id="overlay"></div>
     <dialog id="loginDialog" class="caixaDialog">
         <form action = "/login" method = "post" >
@@ -113,24 +116,14 @@
             </label>
           </div>
 
-    <!-- BUSCAR -->
-        <div class="campo-busca">
+ 
+              <!-- BUSCAR -->
+              <div class="campo-busca">
+            
+                <div class="sobre-texto">Faça já sua locação</div>
+            
             <div>
-                <select name="unidades-senac" class="txtBusca" id="unidades-senac">
-                    <option value="senac">Senac Santo Amaro</option>
-                    <option value="aclimacao">Senac Aclimação</option>
-                    <option value="itaquera">Senac Itaquera</option>
-                </select>
-            </div>
-            <div >
-                <select name="espaco-senac" class="txtBusca" id="espaco-senac">
-                    <option value="Sintetica">Sintetica</option>
-                    <option value="volei">Volei</option>
-                    <option value="Basquete">Basquete</option>
-                </select>
-            </div>
-            <div>
-                <button class="botaoBuscar">Buscar</button>
+                <button class="botaoBuscar" onclick="window.location.href='/locacao.jsp';">Locação</button>
             </div>
         </div>
     </div>

@@ -38,7 +38,7 @@ public class LoginUserServlet extends HttpServlet {
 
         } else {
 
-            req.setAttribute("message", "Credenciais invalidas");
+            req.setAttribute("message", "Credenciais inválidas! Por favor, verifique o e-mail e a senha inseridos para prosseguir com o login.");
             req.setAttribute("usuarioLogado", false);
 
             req.getRequestDispatcher("index.jsp").forward(req, resp);

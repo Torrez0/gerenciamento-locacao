@@ -16,7 +16,7 @@
 
     <dialog id="reservaDialog" class="caixaDialogReserva">
         <form action="/locacao" method="post">
-            <h6 class="H6" name="sintetica" id="sintetica">Quadra Sintética</h6>
+            <h6 class="H6" name="sintetica" id="sintetica">Reserva</h6>
 
 
             <select name="quadras" id="quadras" class="inputQuadra">
