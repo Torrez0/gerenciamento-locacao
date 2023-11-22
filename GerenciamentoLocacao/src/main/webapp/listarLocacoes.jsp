@@ -53,14 +53,14 @@
                 <td>${locacao.dataLocacaoFim}</td>
                 <td>${locacao.usuario}</td>
                 <td>
-                    <form action="/delete-locacaoAdmin" method="post">
+                    <form action="/delete-locacao" method="post">
                         <input type="hidden" name="idLocacao" value="${locacao.id}">
                         <button type="submit">Delete</button>
                     </form>
                     <button type="submit" id="loginBotao" onclick="abrirAlterarDialog()" >Alterar</button>
                 </td>
                 <dialog id="alterarDialog" class="caixaDialog">
-                    <form action = "/alterLocacaoAdmin" method = "post" >
+                    <form action = "/alterLocacao" method = "post" >
     
                         <select name="quadras" id="quadras" class="inputTime">
                             <option>sintetico</option>
@@ -82,7 +82,7 @@
                             <option>20:00</option>
                         </select>
     
-                        <form action="/alterLocacaoAdmin" method="post">
+                        <form action="/alterLocacao" method="post">
                             <input type="hidden" name="idLocacao" value="${locacao.id}">
                             <button type="submit" >Alterar</button>
                         </form>
