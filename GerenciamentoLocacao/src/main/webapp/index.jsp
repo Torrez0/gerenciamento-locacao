@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="CSS/site.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="CSS/select.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="CSS/caixaAlerta.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="CSS/teste.css" media="screen" />
+   
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -32,6 +34,7 @@
             </div>
         </div>
 
+       
         <!-- Caixa Dialog Login -->
         <div id="overlay"></div>
     <dialog id="loginDialog" class="caixaDialog">
@@ -49,6 +52,20 @@
     
     
     </dialog>
+
+     <!-- Caixa Alerta Efetuar o Login -->
+     <dialog id="loginDialogs" class="caixaAlertaPaiLogin">
+            
+        <div class="caixaAlertaLogin">
+            <span>Ops! Parece que houve um equívoco. 
+                Por favor, confira suas informações de 
+                login e tente novamente para desfrutar 
+                dos nossos serviços</span>
+            <button onclick="fecharAlertaLogin()">✖</button>
+        </div>
+
+    </dialog>
+
     
     <!-- Caixa Dialog Cadastro -->
     <div id="overlay"></div>
@@ -119,11 +136,12 @@
  
               <!-- BUSCAR -->
               <div class="campo-busca">
-            
-                <h2>Faça já sua locação</h2>
+               
+                <h2 class="jogoRegras">Seu jogo, suas regras. <br>
+                    Reserve sua quadra esportiva conosco!</h2>
             
             <div>
-                <button class="botaoBuscar" onclick="window.location.href='/locacao.jsp';">Locação</button>
+                <button class="botaoBuscar" onclick="abrirLoginAlerta()">Locação</button>
             </div>
         </div>
     </div>
@@ -188,8 +206,8 @@
             <h2 class="titulo-quadras"> Locação de Quadras Esportivas - O Seu Espaço de Competição!</h2>
             <div class="img-quadras">
                 
-                <img class="testimg" src="./img/CarrosselAberto.png" onclick="window.location.href='';"/>
-                <img class="testimg" src="./img/CarrosselCoberta.png" onclick="window.location.href='';"/>
+                <img class="testimg" src="./img/CarrosselAberto.png" onclick="abrirLoginAlerta()"/>
+                <img class="testimg" src="./img/CarrosselCoberta.png" onclick="abrirLoginAlerta()"/>
                <!-- <button class="botaoLocacao">Clique Aqui</button>-->
  
             </div>

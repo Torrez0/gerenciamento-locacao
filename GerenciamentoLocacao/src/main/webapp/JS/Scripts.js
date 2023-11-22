@@ -94,6 +94,29 @@ function fecharAlterarDialog(){
 
 }
 
+/////ALERTA LOGIN
+//Função para abrir ALERTA LOGIN
+function abrirLoginAlerta(){
+
+    var loginDialog = document.getElementById('loginDialogs');
+    var overlay = document.getElementById('overlay');
+
+        loginDialog.showModal();
+        overlay.style.display = 'block';
+
+}
+
+//Função para fechar ALERTA LOGIN
+function fecharAlertaLogin(){
+
+    var CadastroDialog = document.getElementById('loginDialogs');
+    var overlay = document.getElementById('overlay');
+
+        CadastroDialog.close();
+        overlay.style.display = 'none';
+
+}
+
 
 //DARK MODE
 
@@ -124,5 +147,12 @@ function fecharCaixaAlerta() {
     document.getElementById('fecharCaixaAlerta').style.display = 'none';
 }
 
+function mouseOver() {
+    document.querySelector('.hover-effect').style.transform = 'scale(1.2)';
+  }
+
+  function mouseOut() {
+    document.querySelector('.hover-effect').style.transform = 'scale(1)';
+  }
 
 

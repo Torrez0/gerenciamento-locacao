@@ -143,8 +143,23 @@ body.dark{
 .campo-busca{
     height: 100%;
     padding-right: 25%;
-    display: flex
+    display: flex;
+    color: #fff;
+    text-decoration: underline;
+   
+}
+body.dark .campo-busca{
+  height: 100%;
+  padding-right: 25%;
+  display: flex;
+  color: #F78B1F;
+  text-decoration: underline;
+ 
+}
+.jogoRegras{
 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
 }
 
 
@@ -179,14 +194,15 @@ body.dark{
   .botaoBuscar{
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    height:32px;
-    width:70px;
+    height:40px;
+    width:100px;
     background: #f78b1f;
     color: #fff;
     border: 0px solid #eee;
     border-radius: 9px;
     text-shadow: none;
-    margin-left: 100px;
+    margin-left: 80px;
+    margin-top: 20px;
   }
 
 

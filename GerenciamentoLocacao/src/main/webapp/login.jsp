@@ -111,10 +111,11 @@
                 </label>
             </div>
 
-               <!-- BUSCAR -->
-        <div class="campo-busca">
-            
-            <div class="sobre-texto">Faça já sua locação</div>
+       <!-- BUSCAR -->
+       <div class="campo-busca">
+               
+        <h2 class="jogoRegras">Seu jogo, suas regras. <br>
+            Reserve sua quadra esportiva conosco!</h2>
         
         <div>
             <button class="botaoBuscar" onclick="window.location.href='/locacao.jsp';">Locação</button>
