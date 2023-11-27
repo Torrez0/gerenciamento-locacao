@@ -27,6 +27,7 @@
     <main class="login_form">
 
         <!-- Caixa ALERTA -->
+
         <div class="caixaAlertaPai" id="fecharCaixaAlerta">
             <div class="caixaAlerta">
                 <%= request.getAttribute("message") %>
@@ -106,7 +107,7 @@
 
 <header>
     
-   
+    <!-- Logo e Botões -->
     <div class="header">
         <div class="logo-site">
             <img class="logoQuick" src="./img/logoGetQuick.png">
@@ -180,6 +181,7 @@
 
 
     <!-- Sobre locação -->
+    
     <div class="container-sobre">
 
         <div class="sobre-texto">Sobre Locação</div>
